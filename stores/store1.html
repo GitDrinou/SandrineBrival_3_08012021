@@ -3,83 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ohmyfood! - La palette du goût</title>    
+    <title>Ohmyfood - La palette du goût</title>    
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style-base.css">
     <script src="https://kit.fontawesome.com/25333533ea.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <img src="/img/logo/ohmyfood@2x.svg" alt="Logo">
+    <header class="header__shop center">
+        <h1>ohmyfood</h1>
     </header>
-    <nav>
-        <i class="fas fa-arrow-left"></i>
+    <nav id="return">
+        <a href="/index.html" class="nav__shop"><i class="fas fa-arrow-left"></i></a>
     </nav>
     <main>
-        <img src="/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
-        <section>
-            <h1>La palette du goût</h1>
-            <h2>Entrées</h2>
-            <ul>
-                <li>
-                    <span>Fricassée d'escargot</span>
-                    <span>Au piment d'Espelette</span> 
-                    <span>25€</span>
+        <img src="/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût" class="menu__img">
+        <h1 class="menu__shopname">La palette du goût</h1>
+        <section class="menu__element">            
+            <h2 class="menu__categories">Entrées</h2>
+            <ul class="menu__choices">
+                <li class="menu__items">
+                    <p class="menu__name">Fricassée d'escargot</p>
+                    <p class="menu__descr">Au piment d'Espelette</p> 
+                    <div class="menu__price">25€</div>
                 </li>
-                <li>
-                    <span>Foie gras de canard mi-cuit</span>
-                    <span>Et ses copeaux de truffe noire</span>
-                    <span>35€</span>
+                <li class="menu__items">
+                    <p class="menu__name">Foie gras de canard mi-cuit</p>
+                    <p class="menu__descr">Et ses copeaux de truffe noire</p>
+                    <div class="menu__price">35€</div>
                 </li>
-                <li>
-                    <span>Oeuf au plat</span>
-                    <span>Assaisonné à la truffe sur lit de caviar</span>
-                    <span>20€</span>
+                <li class="menu__items">
+                    <p class="menu__name">Oeuf au plat</p>
+                    <p class="menu__descr">Assaisonné à la truffe sur lit de caviar</p>
+                    <div class="menu__price">20€</div>
                 </li>
             </ul>
-            <h2>Plats</h2>
-            <ul>
-                <li>
-                    <span>Filet de boeuf aux herbes</span>
-                    <span>Accompagné de sa ribambelle de légumes</span> 
-                    <span>40€</span>
+            <h2 class="menu__categories space30__top">Plats</h2>
+            <ul class="menu__choices">
+                <li class="menu__items">
+                    <p class="menu__name">Filet de boeuf aux herbes</p>
+                    <p class="menu__descr">Accompagné de sa ribambelle de légumes</p> 
+                    <div class="menu__price">40€</div>
                 </li>
-                <li>
-                    <span>Parmentier de queue de boeuf</span>
-                    <span>À la truffe noire sur sa purée de panais</span>
-                    <span>35€</span>
+                <li class="menu__items">
+                    <p class="menu__name">Parmentier de queue de boeuf</p>
+                    <p class="menu__descr">À la truffe noire sur sa purée de panais</p>
+                    <div class="menu__price">35€</div>
                 </li>
-                <li>
-                    <span>Filet de turbot</span>
-                    <span>Aux agrumes</span>
-                    <span>44€</span>
+                <li class="menu__items">
+                    <p class="menu__name">Filet de turbot</p>
+                    <p class="menu__descr">Aux agrumes</p>
+                    <div class="menu__price">44€</div>
                 </li>
             </ul>            
-            <h2>Desserts</h2>
-            <ul>
-                <li>
-                    <span>Paris-Brest</span>
-                    <span>Revisité</span> 
-                    <span>18€</span>
+            <h2 class="menu__categories space30__top">Desserts</h2>
+            <ul class="menu__choices">
+                <li class="menu__items">
+                    <p class="menu__name">Paris-Brest</p>
+                    <p class="menu__descr">Revisité</p> 
+                    <div class="menu__price">18€</div>
                 </li>
-                <li>
-                    <span>Macaron au chocolat d'exception </span>
-                    <span>Et glace à la vanille de Madagascar</span>
-                    <span>22€</span>
+                <li class="menu__items">
+                    <p class="menu__name">Macaron au chocolat d'exception </p>
+                    <p class="menu__descr">Et glace à la vanille de Madagascar</p>
+                    <div class="menu__price">22€</div>
                 </li>
-                <li>
-                    <span>Mousse au chocolat</span>
-                    <span>Au piment d'Espelette et à la truffe noire</span>
-                    <span>23€</span>
+                <li class="menu__items">
+                    <p class="menu__name">Mousse au chocolat</p>
+                    <p class="menu__descr">Au piment d'Espelette et à la truffe noire</p>
+                    <div class="menu__price">23€</div>
                 </li>
             </ul>
+            <div class="center"> 
+                <button class="btn">Commander</button>
+            </div>
         </section>
-    </main>       
-    <footer>
-        <h3>ohmyfood</h3>
+    </main>
+    <footer class="footer">
+        <h3 class="foot__logo">ohmyfood</h3>
         <ul>
-            <li><i class="fas fa-utensils"></i> Proposer un restaurant</li>
-            <li><i class="fas fa-hands-helping"></i>Devenir partenaire</li>
-            <li>Mentions légales</li>
-            <li>Contact</li>
+            <li class="foot__links">
+                <a href="#">
+                    <i class="fas fa-utensils foot__ico"></i> 
+                    Proposer un restaurant
+                </a>
+            </li>                
+            <li class="foot__links">
+                <a href="#">
+                    <i class="fas fa-hands-helping foot__ico"></i>
+                    Devenir partenaire
+                </a>
+            </li>
+            <li class="foot__links">
+                <a href="#">Mentions légales</a>
+            </li>
+            <li class="foot__links">
+                <a href="#">Contact</a>
+            </li>
         </ul>
     </footer>
 </body>
