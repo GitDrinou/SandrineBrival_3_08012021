@@ -1,0 +1,18 @@
+@import "./utils/variables";
+@import "./utils/mixins";
+
+
+@import "./base/base";
+@import "./base/typography";
+@import "./base/images";
+
+@import "./components/buttons";
+
+@import "./layout/header";
+@import "./layout/nav";
+@import "./layout/stickers";
+@import "./layout/footer";
+@import "./layout/menu.scss";
+
+@import "./pages/home";
+@import "./pages/stores.scss";

@@ -1,0 +1,24 @@
+
+
+
+@mixin heading {
+    margin-top: 60px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 20px;
+    background-color: $colour-bg-secondary;
+    
+}
+
+@mixin btn {
+    margin-top: 30px;
+    height: 60px;
+    width: 220px;
+    border-radius: 30px;
+    font-size: 1rem;
+    background: linear-gradient(#FF79DA, #9356DC);
+    outline: none;
+    border: none;
+    color: white;
+    font-weight: bold;
+}

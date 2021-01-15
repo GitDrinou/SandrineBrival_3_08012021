@@ -1,0 +1,54 @@
+.menu {
+    &__img {
+        height: 255px;
+        object-fit: cover;
+        position: relative;
+    }
+    &__shopname {
+        position: absolute;
+        border-radius: 40px 40px 0 0;
+        background-color: #F6F6F6;
+        left: 0;
+        width: 100%;
+        top: 300px;
+        font-family: Shrikhand, Arial, Verdana, sans-serif; ;
+        font-size: 1.7rem;
+        padding: 35px 20px 0 20px;
+    }
+    &__categories {
+        text-transform: uppercase;
+        height: 25px;
+        width:max-content;
+        border-bottom: 3px solid #99e2d0 ;
+        margin: 60px 20px 20px 20px ;
+    }
+    &__choices {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    &__items {
+        height: 70px;
+        background-color: white;
+        border-radius: 20px;
+        padding:12px;
+        margin-bottom: 10px;    
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        position: relative;
+    }
+    &__name {
+        font-weight: bold;
+        padding: 5px 0;
+    }
+    &__descr {
+        width: 80%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &__price {
+        font-weight: bold;
+        position: absolute;
+        right: 20px;
+        top: 35px;
+    }
+}

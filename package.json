@@ -1,0 +1,19 @@
+{
+  "name": "p03-livrable",
+  "version": "1.0.0",
+  "description": "projet 03 - dynamiser une page web avec des animations css",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GitDrinou/SandrineBrival_3_08012021.git"
+  },
+  "author": "Sandrine BRIVAL",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GitDrinou/SandrineBrival_3_08012021/issues"
+  },
+  "homepage": "https://github.com/GitDrinou/SandrineBrival_3_08012021#readme"
+}

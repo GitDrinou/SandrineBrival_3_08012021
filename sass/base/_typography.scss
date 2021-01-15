@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Shrikhand&display=swap');
+body {
+    font-family: $font-content;
+    color: $colour-font;    
+    color: $colour-font;
+}
+
+.center {
+    text-align: $mid-align;
+}
+
+.header {
+    font-family: $font-logo;      
+    font-size: 1.7rem;
+}
+
+.pres__heading {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.pres__subheading {
+    font-weight: normal;
+    font-size: 1.1rem;
+}

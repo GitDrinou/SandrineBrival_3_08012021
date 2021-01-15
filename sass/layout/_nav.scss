@@ -1,0 +1,27 @@
+.search {
+    height: 65px;
+    padding-top: 25px;
+    font-size: 1rem;
+    background-color: $colour-bg-tertiary;
+    &__input {
+        font-size: 1rem;
+        font-weight: bold;;
+        border: none;
+        outline: none;
+        background-color: $colour-none;
+        margin-left: 10px;
+        max-width: 35%;
+    }
+}
+
+.return {
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    font-size: 1.3rem;
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+
