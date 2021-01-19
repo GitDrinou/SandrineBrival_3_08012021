@@ -1,22 +1,22 @@
 .footer {
-    margin-top: 60px ;
-    background-color: #353535;
-    padding: 25px 20px;
-    color: white;
+    margin-top: $default-size * 3;
+    background-color: darken($color-bg-primary, 76%);
+    padding: $default-size*1.25 $default-size;
+    color: $color-bg-secondary;
     &__logo {
-        font-family: Shrikhand, Arial, Verdana, sans-serif;
-        font-size: 1.5rem;
-        padding-bottom: 20px;
+        font-family: $font-logo;
+        font-size: $default-size *1.2;
+        padding-bottom: $default-size;
     }
     &__links {
-        font-size: 1.1rem;
-        padding-bottom: 10px;
+        font-size: $default-size * 0.9;
+        padding-bottom: $default-size * 0.5;
         a {
-            color: white;
+            color: $color-bg-secondary;
             text-decoration: none;
         }
     }
     &__ico {
-        padding-right: 10px;
+        padding-right: $default-size * 0.5;
     }
 }

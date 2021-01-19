@@ -1,5 +1,5 @@
 .pres__heading {
-    margin-top: 20px;
+    margin-top: $default-size;
 }
 
 .fonc {
@@ -7,36 +7,38 @@
         @include heading;
     }
     &__element {
-        margin: 20px 0;
-        height: 60px;
-        border-radius: 35px;
-        padding: 20px;
-        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
-        position: relative;
+        position: relative; 
+        margin: $default-size/2 $default-size;
+        height: $default-size * 3;
+        border-radius: $default-size * 1.75;
+        padding: $default-size;
+        @include bloc-shadow(0px,$default-size * 0.12, $default-size*0.5, $color-shadow); 
     }
     &__puce {
         position: absolute;
-        top: 15px;
-        left: -10px;
-        font-size: 1rem;
-        background-color: $colour-primary;
-        height: 30px;
-        width: 30px;
-        color:white;
-        padding: 5px 10px;
+        top: $default-size;
+        left:$default-size * -0.4;
+        font-size: $default-size * 0.8;
+        background-color: $color-primary;
+        height: $default-size * 1.2;
+        width: $default-size * 1.2;
+        color:lighten($color-font, 80%);
+        padding: $default-size*0.2 $default-size * 0.35;
         border-radius: 50%;
-        margin-right: 20px;
+        margin-right: $default-size;
     }
     &__ico {
-        font-size: 1.4rem;
-        color: #7e7e7e;
-        margin-right: 20px;
+        font-size: $default-size * 0.9;
+        color: lighten($color-font, 55%);
+        margin-right: $default-size;
         position: absolute;
-        left: 40px;
+        left: $default-size *2;
+        top: $default-size;
     }
     &__text {
         font-weight: bold;
         position: absolute;
-        left: 80px;
+        left: $default-size * 4;
+        top: $default-size;
     }    
 }

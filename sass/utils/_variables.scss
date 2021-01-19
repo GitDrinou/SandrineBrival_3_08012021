@@ -1,14 +1,29 @@
-$colour-primary: #9356DC;
-$colour-bg-primary:  #F6F6F6;
-$colour-bg-secondary: #FFFFFF;
-$colour-bg-tertiary: #EAEAEA;
-$colour-font: #000000;
-$colour-none: transparent;
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+
+$color-bg-primary:  #F6F6F6;
+$color-bg-secondary: #FFFFFF;
+$color-bg-tertiary: #EAEAEA;
+
+$color-shadow: darken($color-bg-primary, 20%);
+
+$color-font: #000000;
+
+$default-size: 1.25rem;
 
 $font-logo: Shrikhand, Arial, Verdana, sans-serif;
 $font-content: Roboto, Arial, Verdana, sans-serif;
 
 $mid-align: center;
+
+$breakpoints: (
+    mobile: 320px,
+    tablet: 480px,
+    desktop: 1025px
+);
+
+
 
 
 

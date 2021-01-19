@@ -1,27 +1,25 @@
 .search {
-    height: 65px;
-    padding-top: 25px;
-    font-size: 1rem;
-    background-color: $colour-bg-tertiary;
+    height: $default-size * 3.25;
+    padding-top: $default-size * 1.25;
     &__input {
-        font-size: 1rem;
+        font-size: $default-size * 0.8;
         font-weight: bold;;
         border: none;
         outline: none;
-        background-color: $colour-none;
-        margin-left: 10px;
-        max-width: 35%;
+        background-color: $color-bg-primary;
+        margin-left: $default-size * 0.5;
+        max-width: 40%;
     }
 }
 
 .return {
     position: absolute;
-    left: 25px;
-    top: 25px;
-    font-size: 1.3rem;
+    left: $default-size * 1.25;
+    top: $default-size * 1.25;
+    font-size: $default-size * 1.05;
     a {
         text-decoration: none;
-        color: black;
+        color: $color-font;
     }
 }
 

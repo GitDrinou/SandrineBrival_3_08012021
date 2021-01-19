@@ -1,45 +1,44 @@
 .store {
-    margin-top: 70px;
+    margin-top: $default-size * 3.5;      
+    color: $color-font;
     &__heading {
         @include heading;
     }
     &__element {
-        padding: 0 20px 20px 20px;
+        padding: 0 $default-size $default-size $default-size;
         position: relative;
         a {
             text-decoration: none;
-            color: black;
+            color: $color-font;
         }
     }
     &__img {
-        border-radius: 20px 20px 0 0;
-        height: 175px;
+        border-radius: $default-size $default-size 0 0;
+        height: $default-size * 8.75;
         width: 100%;
         object-fit: cover;   
     }
     &__info {
-        background-color: white;
-        border-radius: 0 0 20px 20px;
-        height: 80px;
-        padding: 20px;
-        margin-top: -3px;
-        position: relative;    
-        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+        background-color: $color-bg-secondary;
+        border-radius: 0 0 $default-size $default-size;
+        height: $default-size * 4;
+        padding: $default-size;
+        margin-top: $default-size * -0.15;
+        @include bloc-shadow(0px,$default-size * 0.12, $default-size*0.5, $color-shadow); 
+        position: relative;
     }
     &__like {
         position: absolute;
-        font-size: 1.3rem;
-        right: 35px;
-        top: 25px;
-    }
+        font-size: $default-size * 1.1;
+        right: $default-size * 1.7;
+        top: $default-size * 1.7;
+    }   
     &__name {
-        font-size: 1.1rem;
+        font-size: $default-size * 0.85;  
         font-weight: bold;
-        color: black;
     }
-    &__city {
-        font-size: 1.1rem;
+    &__city {   
+        font-size: $default-size * 0.85;       
         padding: 5px 0 25px 0;
-        color: black;
     }
 }

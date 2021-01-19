@@ -1,6 +1,7 @@
 .header {
-    height: 70px; 
-    padding-top: 20px;
-    background-color: $colour-bg-secondary;
-    box-shadow: 0px 2px 5px hsla(0, 0%, 0%, 0.2);
+    height: $default-size * 3.5; 
+    padding-top: $default-size;
+    background-color: $color-bg-secondary;
+    @include bloc-shadow(0,$default-size*0.1, $default-size*0.5, $color-shadow);
+   
 } 

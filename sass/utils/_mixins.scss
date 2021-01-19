@@ -1,24 +1,27 @@
-
-
+@mixin bloc-shadow($offset1, $offset2, $thickness, $color){
+    box-shadow: $offset1 $offset2 $thickness $color;
+}
 
 @mixin heading {
-    margin-top: 60px;
+    width: 100%;
+    margin-top: $default-size * 3;
     font-size: 1.3rem;
     font-weight: bold;
-    padding: 20px;
-    background-color: $colour-bg-secondary;
-    
+    padding: $default-size;
+    background-color: $color-bg-secondary;    
 }
 
 @mixin btn {
-    margin-top: 30px;
-    height: 60px;
-    width: 220px;
-    border-radius: 30px;
+    margin-top: $default-size * 1.5;
+    height: $default-size * 2.5;
+    width: $default-size * 12;
+    border-radius: $default-size * 1.75;
     font-size: 1rem;
     background: linear-gradient(#FF79DA, #9356DC);
     outline: none;
     border: none;
-    color: white;
+    color: lighten($color-font, 80%);
     font-weight: bold;
+    @include bloc-shadow(0px,$default-size * 0.12, $default-size*0.5, $color-shadow);
 }
+

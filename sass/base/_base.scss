@@ -8,13 +8,10 @@
 
 body {
     box-sizing: border-box;
-    background: $colour-bg-primary;   
+    background: $color-bg-primary;   
     margin: 0 auto;
     position: relative; 
-    max-width: 375px;
-}
-
-.space30__top {
-    margin-top: 30px;
+    width: 100%;
+    /*max-width: map-get($breakpoints,mobile);*/
 }
 

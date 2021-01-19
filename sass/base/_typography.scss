@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Shrikhand&display=swap');
 body {
     font-family: $font-content;
-    color: $colour-font;    
-    color: $colour-font;
+    color: $color-font; 
 }
 
 .center {
@@ -11,15 +10,15 @@ body {
 
 .header {
     font-family: $font-logo;      
-    font-size: 1.7rem;
+    font-size: $default-size * 1.4;
 }
 
 .pres__heading {
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: $default-size * 1.2;
 }
 
 .pres__subheading {
     font-weight: normal;
-    font-size: 1.1rem;
+    font-size: $default-size * 0.9;
 }

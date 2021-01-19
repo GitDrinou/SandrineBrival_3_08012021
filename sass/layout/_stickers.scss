@@ -1,10 +1,11 @@
 .sticker-new {
-    height: 30px;
-    width: 80px;
+    height: $default-size * 1.5;
+    width: $default-size * 4;
     text-align:center;
-    padding: 6px;
-    background-color: #99e2d0;
+    padding: $default-size * 0.3;
+    background-color: $color-tertiary;
     position: absolute;
-    top: 15px;
-    right: 35px;
+    top: $default-size * 0.75;
+    right: $default-size *  1.75;
+    color: darken($color-tertiary, 53%);
 }

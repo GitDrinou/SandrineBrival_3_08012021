@@ -17,16 +17,12 @@ body {
   background: #F6F6F6;
   margin: 0 auto;
   position: relative;
-  max-width: 375px;
-}
-
-.space30__top {
-  margin-top: 30px;
+  width: 100%;
+  /*max-width: map-get($breakpoints,mobile);*/
 }
 
 body {
   font-family: Roboto, Arial, Verdana, sans-serif;
-  color: #000000;
   color: #000000;
 }
 
@@ -36,7 +32,7 @@ body {
 
 .header {
   font-family: Shrikhand, Arial, Verdana, sans-serif;
-  font-size: 1.7rem;
+  font-size: 1.75rem;
 }
 
 .pres__heading {
@@ -46,7 +42,7 @@ body {
 
 .pres__subheading {
   font-weight: normal;
-  font-size: 1.1rem;
+  font-size: 1.125rem;
 }
 
 img {
@@ -55,125 +51,133 @@ img {
 }
 
 .btn {
-  margin-top: 30px;
-  height: 60px;
-  width: 220px;
-  border-radius: 30px;
+  margin-top: 1.875rem;
+  height: 3.125rem;
+  width: 15rem;
+  border-radius: 2.1875rem;
   font-size: 1rem;
   background: linear-gradient(#FF79DA, #9356DC);
   outline: none;
   border: none;
-  color: white;
+  color: #cccccc;
   font-weight: bold;
+  box-shadow: 0px 0.15rem 0.625rem #c3c3c3;
 }
 
 .header {
-  height: 70px;
-  padding-top: 20px;
+  height: 4.375rem;
+  padding-top: 1.25rem;
   background-color: #FFFFFF;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.125rem 0.625rem #c3c3c3;
 }
 
 .search {
-  height: 65px;
-  padding-top: 25px;
-  font-size: 1rem;
-  background-color: #EAEAEA;
+  height: 4.0625rem;
+  padding-top: 1.5625rem;
 }
 .search__input {
   font-size: 1rem;
   font-weight: bold;
   border: none;
   outline: none;
-  background-color: transparent;
-  margin-left: 10px;
-  max-width: 35%;
+  background-color: #F6F6F6;
+  margin-left: 0.625rem;
+  max-width: 40%;
 }
 
 .return {
   position: absolute;
-  left: 25px;
-  top: 25px;
-  font-size: 1.3rem;
+  left: 1.5625rem;
+  top: 1.5625rem;
+  font-size: 1.3125rem;
 }
 .return a {
   text-decoration: none;
-  color: black;
+  color: #000000;
 }
 
 .sticker-new {
-  height: 30px;
-  width: 80px;
+  height: 1.875rem;
+  width: 5rem;
   text-align: center;
-  padding: 6px;
-  background-color: #99e2d0;
+  padding: 0.375rem;
+  background-color: #99E2D0;
   position: absolute;
-  top: 15px;
-  right: 35px;
+  top: 0.9375rem;
+  right: 2.1875rem;
+  color: #185546;
 }
 
 .footer {
-  margin-top: 60px;
-  background-color: #353535;
-  padding: 25px 20px;
-  color: white;
+  margin-top: 3.75rem;
+  background-color: #343434;
+  padding: 1.5625rem 1.25rem;
+  color: #FFFFFF;
 }
 .footer__logo {
   font-family: Shrikhand, Arial, Verdana, sans-serif;
   font-size: 1.5rem;
-  padding-bottom: 20px;
+  padding-bottom: 1.25rem;
 }
 .footer__links {
-  font-size: 1.1rem;
-  padding-bottom: 10px;
+  font-size: 1.125rem;
+  padding-bottom: 0.625rem;
 }
 .footer__links a {
-  color: white;
+  color: #FFFFFF;
   text-decoration: none;
 }
 .footer__ico {
-  padding-right: 10px;
+  padding-right: 0.625rem;
 }
 
 .menu__img {
-  height: 255px;
+  height: 16.5625rem;
   object-fit: cover;
   position: relative;
 }
 .menu__shopname {
   position: absolute;
-  border-radius: 40px 40px 0 0;
+  border-radius: 2.5rem 2.5rem 0 0;
   background-color: #F6F6F6;
   left: 0;
   width: 100%;
-  top: 300px;
+  top: 19.0625rem;
   font-family: Shrikhand, Arial, Verdana, sans-serif;
-  font-size: 1.7rem;
-  padding: 35px 20px 0 20px;
+  font-size: 1.625rem;
+  padding: 2.1875rem 1.25rem 0 1.25rem;
+}
+.menu__like {
+  position: absolute;
+  font-size: 1.375rem;
+  right: 1.5rem;
+  top: 21.25rem;
+  font-size: 1.625rem;
+  color: gray;
 }
 .menu__categories {
   text-transform: uppercase;
-  height: 25px;
+  height: 1.5625rem;
   width: max-content;
-  border-bottom: 3px solid #99e2d0;
-  margin: 60px 20px 20px 20px;
+  border-bottom: 0.1875rem solid #99E2D0;
+  margin: 4.375rem 1.25rem 1.25rem 1.25rem;
 }
 .menu__choices {
   max-width: 100%;
-  padding: 0 10px;
+  padding: 0 0.625rem;
 }
 .menu__items {
-  height: 70px;
-  background-color: white;
-  border-radius: 20px;
-  padding: 12px;
-  margin-bottom: 10px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
   position: relative;
+  height: 4.375rem;
+  background-color: #FFFFFF;
+  border-radius: 1.25rem;
+  padding: 0.75rem;
+  margin-bottom: 0.625rem;
+  box-shadow: 0px 0.15rem 0.625rem #c3c3c3;
 }
 .menu__name {
   font-weight: bold;
-  padding: 5px 0;
+  padding: 0.3125rem 0;
 }
 .menu__descr {
   width: 80%;
@@ -184,103 +188,106 @@ img {
 .menu__price {
   font-weight: bold;
   position: absolute;
-  right: 20px;
-  top: 35px;
+  right: 1.25rem;
+  top: 2.1875rem;
 }
 
 .pres__heading {
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 .fonc__heading {
-  margin-top: 60px;
+  width: 100%;
+  margin-top: 3.75rem;
   font-size: 1.3rem;
   font-weight: bold;
-  padding: 20px;
+  padding: 1.25rem;
   background-color: #FFFFFF;
 }
 .fonc__element {
-  margin: 20px 0;
-  height: 60px;
-  border-radius: 35px;
-  padding: 20px;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
   position: relative;
+  margin: 0.625rem 1.25rem;
+  height: 3.75rem;
+  border-radius: 2.1875rem;
+  padding: 1.25rem;
+  box-shadow: 0px 0.15rem 0.625rem #c3c3c3;
 }
 .fonc__puce {
   position: absolute;
-  top: 15px;
-  left: -10px;
+  top: 1.25rem;
+  left: -0.5rem;
   font-size: 1rem;
   background-color: #9356DC;
-  height: 30px;
-  width: 30px;
-  color: white;
-  padding: 5px 10px;
+  height: 1.5rem;
+  width: 1.5rem;
+  color: #cccccc;
+  padding: 0.25rem 0.4375rem;
   border-radius: 50%;
-  margin-right: 20px;
+  margin-right: 1.25rem;
 }
 .fonc__ico {
-  font-size: 1.4rem;
-  color: #7e7e7e;
-  margin-right: 20px;
+  font-size: 1.125rem;
+  color: #8c8c8c;
+  margin-right: 1.25rem;
   position: absolute;
-  left: 40px;
+  left: 2.5rem;
+  top: 1.25rem;
 }
 .fonc__text {
   font-weight: bold;
   position: absolute;
-  left: 80px;
+  left: 5rem;
+  top: 1.25rem;
 }
 
 .store {
-  margin-top: 70px;
+  margin-top: 4.375rem;
+  color: #000000;
 }
 .store__heading {
-  margin-top: 60px;
+  width: 100%;
+  margin-top: 3.75rem;
   font-size: 1.3rem;
   font-weight: bold;
-  padding: 20px;
+  padding: 1.25rem;
   background-color: #FFFFFF;
 }
 .store__element {
-  padding: 0 20px 20px 20px;
+  padding: 0 1.25rem 1.25rem 1.25rem;
   position: relative;
 }
 .store__element a {
   text-decoration: none;
-  color: black;
+  color: #000000;
 }
 .store__img {
-  border-radius: 20px 20px 0 0;
-  height: 175px;
+  border-radius: 1.25rem 1.25rem 0 0;
+  height: 10.9375rem;
   width: 100%;
   object-fit: cover;
 }
 .store__info {
-  background-color: white;
-  border-radius: 0 0 20px 20px;
-  height: 80px;
-  padding: 20px;
-  margin-top: -3px;
+  background-color: #FFFFFF;
+  border-radius: 0 0 1.25rem 1.25rem;
+  height: 5rem;
+  padding: 1.25rem;
+  margin-top: -0.1875rem;
+  box-shadow: 0px 0.15rem 0.625rem #c3c3c3;
   position: relative;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
 }
 .store__like {
   position: absolute;
-  font-size: 1.3rem;
-  right: 35px;
-  top: 25px;
+  font-size: 1.375rem;
+  right: 2.125rem;
+  top: 2.125rem;
 }
 .store__name {
-  font-size: 1.1rem;
+  font-size: 1.0625rem;
   font-weight: bold;
-  color: black;
 }
 .store__city {
-  font-size: 1.1rem;
+  font-size: 1.0625rem;
   padding: 5px 0 25px 0;
-  color: black;
 }
 
 /*# sourceMappingURL=style.css.map */
