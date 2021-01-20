@@ -2,13 +2,13 @@
     box-shadow: $offset1 $offset2 $thickness $color;
 }
 
-@mixin heading {
+@mixin heading ($size:$default-size, $weight:bold, $margin:$default_size, $color: $color-bg-primary ){
     width: 100%;
-    margin-top: $default-size * 3;
-    font-size: 1.3rem;
-    font-weight: bold;
+    margin-top: $margin;
+    font-size: $size;
+    font-weight: $weight;
     padding: $default-size;
-    background-color: $color-bg-secondary;    
+    background-color: $color;    
 }
 
 @mixin btn {
@@ -23,5 +23,9 @@
     color: lighten($color-font, 80%);
     font-weight: bold;
     @include bloc-shadow(0px,$default-size * 0.12, $default-size*0.5, $color-shadow);
+    @media screen and (min-width: map-get($breakpoints, tablet)){
+        height: $default-size * 3;        
+        width: $default-size * 15;        
+        font-size: $default-size;
+    }
 }
-

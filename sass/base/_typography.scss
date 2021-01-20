@@ -11,14 +11,9 @@ body {
 .header {
     font-family: $font-logo;      
     font-size: $default-size * 1.4;
+    @media screen and (min-width: map-get($breakpoints, tablet)){
+        font-size: $default-size * 2.4;
+    }
 }
 
-.pres__heading {
-    font-weight: bold;
-    font-size: $default-size * 1.2;
-}
 
-.pres__subheading {
-    font-weight: normal;
-    font-size: $default-size * 0.9;
-}

@@ -1,10 +1,21 @@
 .pres__heading {
-    margin-top: $default-size;
+    @include heading ($size:$default-size * 1.2);
+    padding: 0 $default-size*2.5;
+    @media screen and (min-width: map-get($breakpoints, tablet)){
+        @include heading ($size:$default-size * 1.5,$margin:$default-size * 1.5);
+    }
+}
+.pres__subheading {
+    @include heading ($size:$default-size * 0.9, $weight:normal, $margin:$default_size*0);
+    @media screen and (min-width: map-get($breakpoints, tablet)){
+        @include heading ($size:$default-size * 1.2, $weight:normal, $margin:$default_size*0);
+        padding: $default-size*0.5;
+    }
 }
 
 .fonc {
     &__heading {
-        @include heading;
+        @include heading ($margin:$default-size * 3, $color:$color-bg-secondary);
     }
     &__element {
         position: relative; 
@@ -40,5 +51,55 @@
         position: absolute;
         left: $default-size * 4;
         top: $default-size;
-    }    
+    }
+    
+    @media screen and (min-width: map-get($breakpoints, tablet)){
+        &__container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            width: 100%;
+            margin-top: $default-size;
+        } 
+        &__element {
+            margin:0 $default-size*0.5;
+            padding: $default-size*0.5;
+            height: $default-size*6;
+        }
+        &__puce {
+            top: $default-size *-0.5;
+            left:40%;
+            font-size: $default-size;
+            height: $default-size * 1.4;
+            width: $default-size * 1.4;
+        }        
+        &__ico {
+            font-size: $default-size * 1.5;
+            left: 40%;
+            top:$default-size*1.5;
+        }
+        &__text {
+            left: $default-size;
+            top: $default-size*3.5;
+            width: 70%;
+            text-align: center;
+        }
+    }
+    @media screen and (min-width: map-get($breakpoints, desktop)){
+        &__container {
+            display: grid;
+            grid-template-columns: 2fr 2fr 2fr;
+            width: 100%;
+            margin-top: $default-size;
+        }  
+        &__puce {
+            left:50%;
+        }        
+        &__ico {
+            left: 50%;
+        }       
+        &__text {
+            width: 100%;
+        }
+    }
+     
 }

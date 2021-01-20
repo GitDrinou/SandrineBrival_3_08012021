@@ -10,6 +10,18 @@
         margin-left: $default-size * 0.5;
         max-width: 40%;
     }
+    @media screen and (min-width: map-get($breakpoints, tablet)){
+        height: $default-size * 4.25;        
+        padding-top: $default-size * 2.25;
+        padding-left: 10%;
+        &__input {
+            font-size: $default-size * 1.2;            
+            margin-left: $default-size * 1.5;
+        }
+        &__ico {   
+            font-size: $default-size * 1.2; 
+        }
+    }
 }
 
 .return {
