@@ -3,12 +3,12 @@
 }
 
 @mixin heading ($size:$default-size, $weight:bold, $margin:$default_size, $color: $color-bg-primary ){
-    width: 100%;
     margin-top: $margin;
     font-size: $size;
     font-weight: $weight;
     padding: $default-size;
-    background-color: $color;    
+    background-color: $color;
+    max-width: 100%;
 }
 
 @mixin btn {
@@ -17,11 +17,15 @@
     width: $default-size * 12;
     border-radius: $default-size * 1.75;
     font-size: 1rem;
-    background: linear-gradient(#FF79DA, #9356DC);
+    background:  $color-primary-light;
     outline: none;
     border: none;
     color: lighten($color-font, 80%);
     font-weight: bold;
+    &:hover {
+        background: linear-gradient(#FF79DA, #9356DC);
+        @include bloc-shadow(0px,$default-size * 0.5, $default-size*0.80, $color-shadow);
+    }
     @include bloc-shadow(0px,$default-size * 0.12, $default-size*0.5, $color-shadow);
     @media screen and (min-width: map-get($breakpoints, tablet)){
         height: $default-size * 3;        
@@ -29,3 +33,5 @@
         font-size: $default-size;
     }
 }
+
+

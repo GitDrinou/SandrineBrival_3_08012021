@@ -9,16 +9,12 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 body {
-  box-sizing: border-box;
+  box-sizing: inherit;
   background: #F6F6F6;
-  margin: 0 auto;
-  position: relative;
-  width: 100%;
-  /*max-width: map-get($breakpoints,mobile);*/
 }
 
 img {
@@ -51,12 +47,16 @@ body {
   width: 15rem;
   border-radius: 2.1875rem;
   font-size: 1rem;
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: #a16be0;
   outline: none;
   border: none;
   color: #cccccc;
   font-weight: bold;
   box-shadow: 0px 0.15rem 0.625rem #c3c3c3;
+}
+.btn:hover {
+  background: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 0px 0.625rem 1rem #c3c3c3;
 }
 @media screen and (min-width: 480px) {
   .btn {
@@ -212,54 +212,69 @@ body {
   right: 1.25rem;
   top: 2.1875rem;
 }
+@media screen and (min-width: 480px) {
+  .menu__shopname {
+    font-size: 1.875rem;
+  }
+  .menu__categories {
+    font-size: 1.375rem;
+  }
+  .menu__items {
+    height: 5rem;
+    padding: 1.125rem;
+  }
+  .menu__name, .menu__desc, .menu__price {
+    font-size: 1.25rem;
+  }
+}
 
 .pres__heading {
-  width: 100%;
+  /*padding: 0 $default-size*2.5;*/
   margin-top: 1.25rem;
   font-size: 1.5rem;
   font-weight: bold;
   padding: 1.25rem;
   background-color: #F6F6F6;
-  padding: 0 3.125rem;
+  max-width: 100%;
 }
 @media screen and (min-width: 480px) {
   .pres__heading {
-    width: 100%;
     margin-top: 1.875rem;
     font-size: 1.875rem;
     font-weight: bold;
     padding: 1.25rem;
     background-color: #F6F6F6;
+    max-width: 100%;
   }
 }
 
 .pres__subheading {
-  width: 100%;
   margin-top: 0rem;
   font-size: 1.125rem;
   font-weight: normal;
   padding: 1.25rem;
   background-color: #F6F6F6;
+  max-width: 100%;
 }
 @media screen and (min-width: 480px) {
   .pres__subheading {
-    width: 100%;
     margin-top: 0rem;
     font-size: 1.5rem;
     font-weight: normal;
     padding: 1.25rem;
     background-color: #F6F6F6;
+    max-width: 100%;
     padding: 0.625rem;
   }
 }
 
 .fonc__heading {
-  width: 100%;
   margin-top: 3.75rem;
   font-size: 1.25rem;
   font-weight: bold;
   padding: 1.25rem;
   background-color: #FFFFFF;
+  max-width: 100%;
 }
 .fonc__element {
   position: relative;
@@ -284,8 +299,7 @@ body {
 }
 .fonc__ico {
   font-size: 1.125rem;
-  color: #8c8c8c;
-  margin-right: 1.25rem;
+  color: #909090;
   position: absolute;
   left: 2.5rem;
   top: 1.25rem;
@@ -297,52 +311,23 @@ body {
   top: 1.25rem;
 }
 @media screen and (min-width: 480px) {
-  .fonc__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 100%;
-    margin-top: 1.25rem;
-  }
-  .fonc__element {
-    margin: 0 0.625rem;
-    padding: 0.625rem;
-    height: 7.5rem;
-  }
   .fonc__puce {
-    top: -0.625rem;
-    left: 40%;
     font-size: 1.25rem;
-    height: 1.75rem;
-    width: 1.75rem;
+    height: 1.875rem;
+    width: 1.875rem;
+    text-align: center;
   }
   .fonc__ico {
     font-size: 1.875rem;
-    left: 40%;
-    top: 1.875rem;
   }
   .fonc__text {
-    left: 1.25rem;
-    top: 4.375rem;
-    width: 70%;
-    text-align: center;
+    font-size: 1.3125rem;
+    left: 6.25rem;
   }
 }
-@media screen and (min-width: 1025px) {
-  .fonc__container {
-    display: grid;
-    grid-template-columns: 2fr 2fr 2fr;
-    width: 100%;
-    margin-top: 1.25rem;
-  }
-  .fonc__puce {
-    left: 50%;
-  }
-  .fonc__ico {
-    left: 50%;
-  }
-  .fonc__text {
-    width: 100%;
-  }
+
+.important {
+  color: #9356DC;
 }
 
 .rest {
@@ -350,12 +335,12 @@ body {
   color: #000000;
 }
 .rest__heading {
-  width: 100%;
   margin-top: 3.75rem;
   font-size: 1.25rem;
   font-weight: bold;
   padding: 1.25rem;
   background-color: #FFFFFF;
+  max-width: 100%;
 }
 .rest__element {
   padding: 0 1.25rem 1.25rem 1.25rem;
@@ -407,12 +392,23 @@ body {
     grid-template-columns: 3fr 3fr;
     width: 100%;
   }
+  .rest__info {
+    height: 5rem;
+  }
+  .rest__like {
+    font-size: 1.5rem;
+  }
+  .rest__name {
+    font-size: 1.3125rem;
+  }
+  .rest__city {
+    font-size: 1.3125rem;
+  }
 }
 @media screen and (min-width: 1025px) {
   .rest__container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    width: 100%;
   }
 }
 

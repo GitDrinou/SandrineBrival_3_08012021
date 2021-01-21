@@ -59,4 +59,19 @@
         right: $default-size;
         top: $default-size*1.75;
     }
+    @media screen and (min-width: map-get($breakpoints, tablet)){
+        &__shopname {
+            font-size: $default-size * 1.5;
+        }
+        &__categories {
+           font-size: $default-size*1.1;
+        }        
+        &__items {
+            height: $default-size*4;   
+            padding: $default-size*0.9;
+        }
+        &__name, &__desc, &__price {
+            font-size: $default-size;
+        }
+    }
 }
