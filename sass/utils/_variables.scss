@@ -1,4 +1,5 @@
 $color-primary: #9356DC;
+$color-primary-trans: rgba(147, 86, 220, 0.9);
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 
@@ -9,9 +10,19 @@ $color-bg-tertiary: #EAEAEA;
 $color-shadow: darken($color-bg-primary, 20%);
 $color-primary-light: lighten(#9356DC,5%);
 
-$color-font: #000000;
+$color-font: #000;
+$color-btn-font: #fff;
 
 $default-size: 1.25rem;
+$margin: 2rem;
+
+$load-bars-size: 3vh;
+$load-size: $load-bars-size * 300;
+$load-bars-color-min: $color-secondary;
+$load-bars-color-max: $color-primary;
+$load-num-bars: 5;
+$load-duration: 1000ms;
+$load-delay: $load-duration / $load-num-bars;
 
 $font-logo: Shrikhand, Arial, Verdana, sans-serif;
 $font-content: Roboto, Arial, Verdana, sans-serif;

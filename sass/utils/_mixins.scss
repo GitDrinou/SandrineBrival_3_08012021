@@ -17,15 +17,16 @@
     width: $default-size * 12;
     border-radius: $default-size * 1.75;
     font-size: 1rem;
-    background:  $color-primary-light;
+    background: linear-gradient($color-secondary, $color-primary);
     outline: none;
     border: none;
-    color: lighten($color-font, 80%);
+    color: darken($color-btn-font,8);
     font-weight: bold;
+    cursor: pointer; 
     &:hover {
-        background: linear-gradient(#FF79DA, #9356DC);
-        @include bloc-shadow(0px,$default-size * 0.5, $default-size*0.80, $color-shadow);
-    }
+        background: linear-gradient(lighten($color-secondary,7) 10%, darken($color-primary,3));
+        @include bloc-shadow(0px,$default-size * 0.3, $default-size*0.2, $color-shadow);
+    } 
     @include bloc-shadow(0px,$default-size * 0.12, $default-size*0.5, $color-shadow);
     @media screen and (min-width: map-get($breakpoints, tablet)){
         height: $default-size * 3;        

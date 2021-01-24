@@ -24,7 +24,7 @@ img {
 
 body {
   font-family: Roboto, Arial, Verdana, sans-serif;
-  color: #000000;
+  color: #000;
 }
 
 .center {
@@ -47,16 +47,17 @@ body {
   width: 15rem;
   border-radius: 2.1875rem;
   font-size: 1rem;
-  background: #a16be0;
+  background: linear-gradient(#FF79DA, #9356DC);
   outline: none;
   border: none;
-  color: #cccccc;
+  color: #ebebeb;
   font-weight: bold;
+  cursor: pointer;
   box-shadow: 0px 0.15rem 0.625rem #c3c3c3;
 }
 .btn:hover {
-  background: linear-gradient(#FF79DA, #9356DC);
-  box-shadow: 0px 0.625rem 1rem #c3c3c3;
+  background: linear-gradient(#ff9de4 10%, #8b49d9);
+  box-shadow: 0px 0.375rem 0.25rem #c3c3c3;
 }
 @media screen and (min-width: 480px) {
   .btn {
@@ -114,7 +115,7 @@ body {
 }
 .return a {
   text-decoration: none;
-  color: #000000;
+  color: #000;
 }
 
 .sticker-new {
@@ -228,6 +229,62 @@ body {
   }
 }
 
+.load-block {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: rgba(147, 86, 220, 0.9);
+  z-index: 1;
+  padding: 20%;
+  animation: hide 1000ms forwards ease 1;
+  animation-delay: 3s;
+}
+
+.load {
+  width: 30vh;
+  height: 22.5vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+.load__bar {
+  background-color: #FF79DA;
+  height: 100%;
+  width: 3vh;
+  animation: bars 1000ms backwards ease-in-out infinite alternate;
+}
+.load__bar--1 {
+  animation-delay: 200ms;
+}
+.load__bar--2 {
+  animation-delay: 400ms;
+}
+.load__bar--3 {
+  animation-delay: 600ms;
+}
+.load__bar--4 {
+  animation-delay: 800ms;
+}
+.load__bar--5 {
+  animation-delay: 1000ms;
+}
+
+@keyframes hide {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+    transform-origin: left;
+  }
+}
+@keyframes bars {
+  0% {
+    transform: scaleY(0.5);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
 .pres__heading {
   /*padding: 0 $default-size*2.5;*/
   margin-top: 1.25rem;
@@ -297,12 +354,25 @@ body {
   border-radius: 50%;
   margin-right: 1.25rem;
 }
+@media screen and (min-width: 480px) {
+  .fonc__puce {
+    font-size: 1.25rem;
+    height: 1.875rem;
+    width: 1.875rem;
+    text-align: center;
+  }
+}
 .fonc__ico {
   font-size: 1.125rem;
   color: #909090;
   position: absolute;
   left: 2.5rem;
   top: 1.25rem;
+}
+@media screen and (min-width: 480px) {
+  .fonc__ico {
+    font-size: 1.875rem;
+  }
 }
 .fonc__text {
   font-weight: bold;
@@ -311,15 +381,6 @@ body {
   top: 1.25rem;
 }
 @media screen and (min-width: 480px) {
-  .fonc__puce {
-    font-size: 1.25rem;
-    height: 1.875rem;
-    width: 1.875rem;
-    text-align: center;
-  }
-  .fonc__ico {
-    font-size: 1.875rem;
-  }
   .fonc__text {
     font-size: 1.3125rem;
     left: 6.25rem;
@@ -332,7 +393,20 @@ body {
 
 .rest {
   margin-top: 4.375rem;
-  color: #000000;
+  color: #000;
+}
+@media screen and (min-width: 480px) {
+  .rest__container {
+    display: grid;
+    grid-template-columns: 3fr 3fr;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .rest__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 .rest__heading {
   margin-top: 3.75rem;
@@ -348,7 +422,7 @@ body {
 }
 .rest__element a {
   text-decoration: none;
-  color: #000000;
+  color: #000;
 }
 .rest__img {
   border-radius: 1.25rem 1.25rem 0 0;
@@ -372,43 +446,38 @@ body {
   box-shadow: 0px 0.15rem 0.625rem #c3c3c3;
   position: relative;
 }
+@media screen and (min-width: 480px) {
+  .rest__info {
+    height: 5rem;
+  }
+}
 .rest__like {
   position: absolute;
   font-size: 1.375rem;
   right: 2.125rem;
   top: 2.125rem;
 }
+@media screen and (min-width: 480px) {
+  .rest__like {
+    font-size: 1.5rem;
+  }
+}
 .rest__name {
   font-size: 1.0625rem;
   font-weight: bold;
+}
+@media screen and (min-width: 480px) {
+  .rest__name {
+    font-size: 1.3125rem;
+  }
 }
 .rest__city {
   font-size: 1.0625rem;
   padding: 5px 0 25px 0;
 }
 @media screen and (min-width: 480px) {
-  .rest__container {
-    display: grid;
-    grid-template-columns: 3fr 3fr;
-    width: 100%;
-  }
-  .rest__info {
-    height: 5rem;
-  }
-  .rest__like {
-    font-size: 1.5rem;
-  }
-  .rest__name {
-    font-size: 1.3125rem;
-  }
   .rest__city {
     font-size: 1.3125rem;
-  }
-}
-@media screen and (min-width: 1025px) {
-  .rest__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 

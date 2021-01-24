@@ -1,3 +1,51 @@
+.load-block { 
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background:$color-primary-trans;
+    z-index: 1;
+    padding: 20%; 
+    animation: hide 1000ms forwards ease 1; 
+    animation-delay: 3s;
+}
+
+.load {   
+    width: $load-bars-size*10;
+    height: $load-bars-size*7.5;
+    display: flex;
+    justify-content: space-evenly;
+    &__bar {
+        background-color:$color-secondary;
+        height: 100%;
+        width: $load-bars-size;
+        animation: bars $load-duration backwards ease-in-out infinite alternate;
+        @for $i from 1 through $load-num-bars {
+            &--#{$i} {
+                animation-delay: $load-delay * $i;
+            }
+        }
+    }
+}
+
+@keyframes  hide {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+        transform-origin: left;
+    }
+}
+@keyframes bars {
+    0% { 
+        transform: scaleY(0.5);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+
 .pres__heading {
     /*padding: 0 $default-size*2.5;*/
     
@@ -38,38 +86,109 @@
         padding: $default-size*0.2 $default-size * 0.35;
         border-radius: 50%;
         margin-right: $default-size;
+        @media screen and (min-width: map-get($breakpoints, tablet)){
+            font-size: $default-size;
+            height: $default-size * 1.5;
+            width: $default-size * 1.5;
+            text-align: center;
+        }
     }
     &__ico {
         font-size: $default-size * 0.9;
         color: darken($color-bg-primary,40%);
         position: absolute;
         left: $default-size *2;
-        top: $default-size;       
+        top: $default-size;  
+        @media screen and (min-width: map-get($breakpoints, tablet)){    
+            font-size: $default-size*1.5;  
+        } 
     }
     &__text {
         font-weight: bold;
         position: absolute;
         left: $default-size * 4;
         top: $default-size;
-    }
-    @media screen and (min-width: map-get($breakpoints, tablet)){
-        
-        &__puce {
-            font-size: $default-size;
-            height: $default-size * 1.5;
-            width: $default-size * 1.5;
-            text-align: center;
-        }        
-        &__ico {
-            font-size: $default-size*1.5;  
-        }       
-        &__text {
+        @media screen and (min-width: map-get($breakpoints, tablet)){
             font-size: $default-size*1.05;            
             left: $default-size * 5;
-        }
-    }       
+        } 
+    }          
 }
 
 .important {
     color: $color-primary;
+}
+
+.rest {
+    margin-top: $default-size * 3.5;      
+    color: $color-font;
+    &__container {
+        @media screen and (min-width: map-get($breakpoints, tablet)){
+            display: grid;
+            grid-template-columns: 3fr 3fr;
+            width: 100%;
+        }
+        @media screen and (min-width: map-get($breakpoints,desktop)){
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;    
+        }
+    }
+ 
+    &__heading {
+        @include heading ($margin:$default-size * 3, $color:$color-bg-secondary);
+    }
+    &__element {
+        padding: 0 $default-size $default-size $default-size;
+        position: relative;
+        a {
+            text-decoration: none;
+            color: $color-font;
+        }
+    }
+    &__img {
+        border-radius: $default-size $default-size 0 0;
+        height: $default-size * 8.75;
+        width: 100%;
+        object-fit: cover;  
+        @media screen and (min-width: map-get($breakpoints, tablet)){
+            height: $default-size * 10;            
+            width: 100%;
+            object-fit: cover;  
+        } 
+    }
+    &__info {
+        background-color: $color-bg-secondary;
+        border-radius: 0 0 $default-size $default-size;
+        height: $default-size * 4;
+        padding: $default-size;
+        margin-top: $default-size * -0.15;
+        @include bloc-shadow(0px,$default-size * 0.12, $default-size*0.5, $color-shadow); 
+        position: relative;
+        @media screen and (min-width: map-get($breakpoints, tablet)){
+            height: $default-size * 4;
+        }
+    }
+    &__like {
+        position: absolute;
+        font-size: $default-size * 1.1;
+        right: $default-size * 1.7;
+        top: $default-size * 1.7;
+        @media screen and (min-width: map-get($breakpoints, tablet)){
+            font-size: $default-size * 1.2;
+        }
+    }   
+    &__name {
+        font-size: $default-size * 0.85;  
+        font-weight: bold;
+        @media screen and (min-width: map-get($breakpoints, tablet)){
+            font-size: $default-size * 1.05; 
+        }
+    }
+    &__city {   
+        font-size: $default-size * 0.85;       
+        padding: 5px 0 25px 0;
+        @media screen and (min-width: map-get($breakpoints, tablet)){
+            font-size: $default-size * 1.05; 
+        }
+    }    
 }
