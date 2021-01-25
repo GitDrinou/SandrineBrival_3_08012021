@@ -2,23 +2,29 @@
     position: fixed;
     height: 100%;
     width: 100%;
-    background:$color-primary-trans;
+    background:$color-bg-primary;
     z-index: 1;
     padding: 20%; 
-    animation: hide 1000ms forwards ease 1; 
+    animation: hide 2000ms forwards ease 1; 
     animation-delay: 3s;
+    @media screen and (min-width: map-get($breakpoints, tablet)){
+        padding: 20% 40%;
+    }
 }
 
 .load {   
-    width: $load-bars-size*10;
-    height: $load-bars-size*7.5;
+    width: $load-bars-size*12;
+    height: $load-bars-size*8;
     display: flex;
     justify-content: space-evenly;
+    border-radius: 20%;
+    padding: $default-size*0.5;
+    border: 5px solid $color-secondary;
     &__bar {
-        background-color:$color-secondary;
+        background: $color-gradient;
         height: 100%;
         width: $load-bars-size;
-        animation: bars $load-duration backwards ease-in-out infinite alternate;
+        animation: bars $load-duration backwards ease-in infinite alternate;
         @for $i from 1 through $load-num-bars {
             &--#{$i} {
                 animation-delay: $load-delay * $i;
@@ -29,16 +35,18 @@
 
 @keyframes  hide {
     0% {
+        opacity: 1;
         transform: scale(1);
     }
-    100% {
+    100% { 
         transform: scale(0);
-        transform-origin: left;
+        transform-origin: bottom;
+        opacity: 0;         
     }
 }
 @keyframes bars {
     0% { 
-        transform: scaleY(0.5);
+        transform: scaleY(0.3);
     }
     100% {
         transform: scaleY(1);

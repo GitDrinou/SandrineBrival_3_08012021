@@ -169,6 +169,11 @@ body {
   font-size: 1.625rem;
   padding: 2.1875rem 1.25rem 0 1.25rem;
 }
+@media screen and (min-width: 480px) {
+  .menu__shopname {
+    font-size: 1.875rem;
+  }
+}
 .menu__like {
   position: absolute;
   font-size: 1.375rem;
@@ -177,12 +182,37 @@ body {
   font-size: 1.625rem;
   color: gray;
 }
+.menu__container {
+  position: absolute;
+  margin-top: 1.25rem;
+  height: 90%;
+  width: 100%;
+  background: #F6F6F6;
+  z-index: 1;
+  animation: hide 2500ms forwards ease 1;
+  animation-delay: 1099ms;
+}
 .menu__categories {
   text-transform: uppercase;
   height: 1.5625rem;
   width: max-content;
   border-bottom: 0.1875rem solid #99E2D0;
   margin: 4.375rem 1.25rem 1.25rem 1.25rem;
+  animation: menu 1000ms forwards ease;
+}
+.menu__categories--1 {
+  animation-delay: 1100ms;
+}
+.menu__categories--2 {
+  animation-delay: 2100ms;
+}
+.menu__categories--3 {
+  animation-delay: 3100ms;
+}
+@media screen and (min-width: 480px) {
+  .menu__categories {
+    font-size: 1.375rem;
+  }
 }
 .menu__choices {
   max-width: 100%;
@@ -195,7 +225,50 @@ body {
   border-radius: 1.25rem;
   padding: 0.75rem;
   margin-bottom: 0.625rem;
+  animation: menu 1000ms;
   box-shadow: 0px 0.15rem 0.625rem #c3c3c3;
+}
+.menu__items--11 {
+  animation-delay: 1250ms;
+}
+.menu__items--12 {
+  animation-delay: 1500ms;
+}
+.menu__items--13 {
+  animation-delay: 1750ms;
+}
+.menu__items--14 {
+  animation-delay: 2000ms;
+}
+.menu__items--21 {
+  animation-delay: 2250ms;
+}
+.menu__items--22 {
+  animation-delay: 2500ms;
+}
+.menu__items--23 {
+  animation-delay: 2750ms;
+}
+.menu__items--24 {
+  animation-delay: 3000ms;
+}
+.menu__items--31 {
+  animation-delay: 3250ms;
+}
+.menu__items--32 {
+  animation-delay: 3500ms;
+}
+.menu__items--33 {
+  animation-delay: 3750ms;
+}
+.menu__items--34 {
+  animation-delay: 4000ms;
+}
+@media screen and (min-width: 480px) {
+  .menu__items {
+    height: 5rem;
+    padding: 1.125rem;
+  }
 }
 .menu__name {
   font-weight: bold;
@@ -214,43 +287,51 @@ body {
   top: 2.1875rem;
 }
 @media screen and (min-width: 480px) {
-  .menu__shopname {
-    font-size: 1.875rem;
-  }
-  .menu__categories {
-    font-size: 1.375rem;
-  }
-  .menu__items {
-    height: 5rem;
-    padding: 1.125rem;
-  }
   .menu__name, .menu__desc, .menu__price {
     font-size: 1.25rem;
   }
 }
 
+@keyframes menu {
+  0% {
+    opacity: 0;
+    transform: translateY(120%);
+    transform-origin: top;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .load-block {
   position: fixed;
   height: 100%;
   width: 100%;
-  background: rgba(147, 86, 220, 0.9);
+  background: #F6F6F6;
   z-index: 1;
   padding: 20%;
-  animation: hide 1000ms forwards ease 1;
+  animation: hide 2000ms forwards ease 1;
   animation-delay: 3s;
+}
+@media screen and (min-width: 480px) {
+  .load-block {
+    padding: 20% 40%;
+  }
 }
 
 .load {
-  width: 30vh;
-  height: 22.5vh;
+  width: 15rem;
+  height: 10rem;
   display: flex;
   justify-content: space-evenly;
+  border-radius: 20%;
+  padding: 0.625rem;
+  border: 5px solid #FF79DA;
 }
 .load__bar {
-  background-color: #FF79DA;
+  background: linear-gradient(#FF79DA, #9356DC);
   height: 100%;
-  width: 3vh;
-  animation: bars 1000ms backwards ease-in-out infinite alternate;
+  width: 1.25rem;
+  animation: bars 1000ms backwards ease-in infinite alternate;
 }
 .load__bar--1 {
   animation-delay: 200ms;
@@ -270,16 +351,18 @@ body {
 
 @keyframes hide {
   0% {
+    opacity: 1;
     transform: scale(1);
   }
   100% {
     transform: scale(0);
-    transform-origin: left;
+    transform-origin: bottom;
+    opacity: 0;
   }
 }
 @keyframes bars {
   0% {
-    transform: scaleY(0.5);
+    transform: scaleY(0.3);
   }
   100% {
     transform: scaleY(1);

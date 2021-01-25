@@ -17,7 +17,7 @@
     width: $default-size * 12;
     border-radius: $default-size * 1.75;
     font-size: 1rem;
-    background: linear-gradient($color-secondary, $color-primary);
+    background: $color-gradient;
     outline: none;
     border: none;
     color: darken($color-btn-font,8);

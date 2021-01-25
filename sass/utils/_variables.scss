@@ -1,7 +1,8 @@
 $color-primary: #9356DC;
-$color-primary-trans: rgba(147, 86, 220, 0.9);
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
+
+$color-gradient: linear-gradient($color-secondary, $color-primary);
 
 $color-bg-primary:  #F6F6F6;
 $color-bg-secondary: #FFFFFF;
@@ -16,13 +17,18 @@ $color-btn-font: #fff;
 $default-size: 1.25rem;
 $margin: 2rem;
 
-$load-bars-size: 3vh;
+$load-bars-size: $default-size;
 $load-size: $load-bars-size * 300;
 $load-bars-color-min: $color-secondary;
 $load-bars-color-max: $color-primary;
 $load-num-bars: 5;
 $load-duration: 1000ms;
 $load-delay: $load-duration / $load-num-bars;
+
+$mnu-num: 4;
+$mnu-cat-num: 3;
+$mnu-dur: 1000ms;
+$mnu-delay: $mnu-dur / $mnu-num;
 
 $font-logo: Shrikhand, Arial, Verdana, sans-serif;
 $font-content: Roboto, Arial, Verdana, sans-serif;
