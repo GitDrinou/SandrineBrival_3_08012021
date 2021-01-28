@@ -10,7 +10,6 @@
 body {
     box-sizing: inherit;
     background: $color-bg-primary; 
-    
     @media screen and (min-width: map-get($breakpoints, desktop)){
         max-width: $breakpoints-max-desktop;
         margin: 0 auto;

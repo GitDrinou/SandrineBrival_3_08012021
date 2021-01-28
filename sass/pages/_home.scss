@@ -2,14 +2,18 @@
     position: fixed;
     height: 100%;
     max-width: 100%;
-    background: $color-bg-primary;
+    background: $color-primary;
     z-index: 1;
-    left: $default-size*2;
-    padding: 40% 20%; 
+    left:0;
+    right: 0;
+    padding: 12%; 
     animation: hide 2000ms forwards ease 1; 
     animation-delay: 3s;
     @media screen and (min-width: map-get($breakpoints, tablet)){
-        padding: 20% 40%;
+        padding: 35%;
+    }
+    @media screen and (min-width: map-get($breakpoints, desktop)){
+        padding: 40%;
     }
 }
 
@@ -34,178 +38,175 @@
     }
 }
 
-.pres__heading {    
-    @include heading ($size:$default-size * 1.2);    
-    @media screen and (min-width: map-get($breakpoints, tablet)){
-        @include heading ($size:$default-size * 1.2,$margin:$default-size * 1.5);
-    }
+.pres-heading {    
+    @include heading ($size:$default-size * 1.2); 
+    @media screen and (min-width: map-get($breakpoints, tablet)){  
+        @include heading ($size:$default-size * 1.2,$margin:$default-size * 1.5);  
+    }       
 }
-.pres__subheading {
+.pres-subheading {
     @include heading ($size:$default-size * 0.9, $weight:normal, $margin:$default_size*0);
-    @media screen and (min-width: map-get($breakpoints, tablet)){
+    @media screen and (min-width: map-get($breakpoints, tablet)){  
         @include heading ($size:$default-size, $weight:normal, $margin:$default_size*0);
         padding: $default-size*0.3;
     }
 }
 
-.fonc {
-    &__heading {
-        @include heading ($margin:$default-size *2.5    , $color:$color-bg-secondary);
-    }
-    &__container {
-        @media screen and (min-width: map-get($breakpoints, tablet)){    
-            display: grid;
-            grid-template-columns: 2fr 2fr 2fr;
-        } 
-    }
-    &__element {
-        position: relative; 
-        margin: $default-size/2 $default-size;
-        height: $default-size * 3;
-        border-radius: $default-size * 1.75;
-        padding: $default-size;
-        @include bloc-shadow(0px,$default-size * 0.12, $default-size*0.5, $color-shadow);   
-        background-color: brown;      
-    }
-    &__puce {
-        position: absolute;
-        top: $default-size;
-        left:$default-size * -0.4;
-        font-size: $default-size * 0.8;
-        background-color: $color-primary;
-        height: $default-size * 1.2;
-        width: $default-size * 1.2;
-        color:lighten($color-font, 80%);
-        padding: $default-size*0.2 $default-size * 0.35;
-        border-radius: 50%;
-        margin-right: $default-size;
-        @media screen and (min-width: map-get($breakpoints, tablet)){
-            font-size: $default-size;
-            height: $default-size * 1.5;
-            width: $default-size * 1.5;
-            text-align: center;
-        }
-    }
-    &__ico {
-        font-size: $default-size * 0.9;
-        color: darken($color-bg-primary,40%);
-        position: absolute;
-        left: $default-size *2;
-        top: $default-size;  
-        @media screen and (min-width: map-get($breakpoints, tablet)){    
-            font-size: $default-size*1.5;  
-        } 
-    }
-    &__text {
-        font-weight: bold;
-        position: absolute;
-        left: $default-size * 4;
-        top: $default-size;
-        @media screen and (min-width: map-get($breakpoints, tablet)){
-            font-size: $default-size*1.05;            
-            left: $default-size * 5;
-        } 
+.b-fonc {
+    & > h2 {
+         @include heading ($margin:$default-size *3, $color:$color-bg-secondary);
     }          
+}
+@media screen and (min-width: map-get($breakpoints, tablet)){  
+    .b-fonc__container {  
+        display: grid;
+        grid-template-columns: 2fr 2fr 2fr;
+    } 
+}
+
+.etape {
+    position: relative; 
+    display: grid;
+    grid-template-columns: 25% auto;
+    margin: $default-size/2 $default-size;
+    height: $default-size * 3;
+    border-radius: $default-size * 1.75;
+    padding: $default-size;
+    @include bloc-shadow(0px,$default-size * 0.12, $default-size*0.5, $color-shadow);   
+    @media screen and (min-width: map-get($breakpoints, tablet)){  
+        margin-top: $default-size*1.5; 
+        padding: $default-size*1.2;   
+        height: max-content;         
+        grid-template-columns: 1fr auto; 
+    }    
+}
+.etape__num {
+    position: absolute;
+    top: $default-size;
+    left:$default-size * -0.4;
+    font-size: $default-size * 0.8;
+    background-color: $color-primary;
+    height: $default-size * 1.2;
+    width: $default-size * 1.2;
+    color:lighten($color-font, 80%);
+    padding: $default-size*0.2 $default-size * 0.35;
+    border-radius: 50%;
+    margin-right: $default-size;
+    @media screen and (min-width: map-get($breakpoints, tablet)){  
+        top: $default-size*-0.8;
+        left: 45%;
+        right: 45%;
+        margin: 0;
+        font-size: $default-size;
+        height: $default-size * 1.5;
+        width: $default-size * 1.5;
+        text-align: center;
+    }   
+}        
+.etape__text {
+    font-weight: bold;
+    text-align: left;
+    @media screen and (min-width: map-get($breakpoints, tablet)){
+        margin-top: $default-size * 0.8;
+        font-size: $default-size*0.9;   
+    } 
+}     
+
+.ico {
+    font-size: $default-size;
+    color: darken($color-bg-primary,40%);
+    margin-left: $default-size;
+    @media screen and (min-width: map-get($breakpoints, tablet)){   
+        font-size: $default-size*1.1; 
+        text-align:center;
+        margin: $default-size * 0.5 $default-size *0.5 0 $default-size * 0.5;
+    } 
 }
 
 .important {
     color: $color-primary;
 }
 
-.rest {
+.b-rest {
     margin-top: $default-size * 3.5;      
     color: $color-font;
-    position: relative;
-    &__container {
-        @media screen and (min-width: map-get($breakpoints, tablet)){
-            display: grid;
-            grid-template-columns: 3fr 3fr;
-            width: 100%;
-        }
-        @media screen and (min-width: map-get($breakpoints,desktop)){
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;    
-        }
+    & > h2 {
+         @include heading ($margin:$default-size *3, $color:$color-bg-secondary);
     }
- 
-    &__heading {
-        @include heading ($margin:$default-size * 3, $color:$color-bg-secondary);
-    }
-    &__element {
-        padding: 0 $default-size $default-size $default-size;
-        position: relative;
-        a {
-            text-decoration: none;
-            color: $color-font;
-        }        
-    }
-    &__img {
-        border-radius: $default-size $default-size 0 0;
-        height: $default-size * 8.75;
+}
+.b-rest__container {
+    @media screen and (min-width: map-get($breakpoints, tablet)){
+        display: grid;
+        grid-template-columns: 3fr 3fr;
         width: 100%;
-        object-fit: cover;  
-        @media screen and (min-width: map-get($breakpoints, tablet)){
-            height: $default-size * 10;            
-            width: 100%;
-            object-fit: cover;  
-        } 
     }
-    &__info {
-        background-color: $color-bg-secondary;
-        border-radius: 0 0 $default-size $default-size;
-        height: $default-size * 4;
-        padding: $default-size;
-        margin-top: $default-size * -0.15;
-        @include bloc-shadow(0px,$default-size * 0.12, $default-size*0.5, $color-shadow); 
-        position: relative;
-        @media screen and (min-width: map-get($breakpoints, tablet)){
-            height: $default-size * 4;
-        }
+    @media screen and (min-width: map-get($breakpoints,desktop)){
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;    
     }
-    &__like {
-        position: absolute;
-        font-size: $default-size * 1.1;
-        right: $default-size*2.5;
-        top: $default-size*11.5;
-        text-align: center;
-        cursor: pointer;
-        @media screen and (min-width: map-get($breakpoints, tablet)){
-            font-size: $default-size * 1.2;
-        }
-    }   
-    &__name {
-        font-size: $default-size * 0.85;  
-        font-weight: bold;
-        @media screen and (min-width: map-get($breakpoints, tablet)){
-            font-size: $default-size * 1.05; 
-        }
-    }
-    &__city {   
-        font-size: $default-size * 0.85;       
-        padding: 5px 0 25px 0;
-        @media screen and (min-width: map-get($breakpoints, tablet)){
-            font-size: $default-size * 1.05; 
-        }
-    }    
 }
 
-.fa-heart {
-    font-weight: bold;
-    cursor: pointer;  
-    background: $color-bg-secondary;
-    background-position: bottom;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -webkit-text-stroke-width: medium;
-    -webkit-text-stroke-color: $color-font;
-    &:active{      
-        transition-timing-function: cubic-bezier(.4,.91,.66,.94);          
-        transition: background-color 2000mq;
-        background: linear-gradient($color-primary, $color-secondary);
-        background-position: bottom;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;   
-        -webkit-text-stroke-width: thin;        
-        -webkit-text-stroke-color: $color-primary-light;
+.rest-card {
+    padding: 0 $default-size $default-size $default-size;   
+    & > a {
+        text-decoration: none;
+        color: $color-font;
+    }   position: relative;
+}
+.rest-card__img {
+    border-radius: $default-size $default-size 0 0;
+    height: $default-size * 8.75;
+    width: 100%;
+    object-fit: cover;  
+    @media screen and (min-width: map-get($breakpoints, tablet)){
+        height: $default-size * 10;            
+        width: 100%;
+        object-fit: cover;  
+    } 
+}  
+.rest-card__like {
+    position: absolute;
+    font-size: $default-size * 1.1;
+    text-align: center;
+    cursor: pointer;
+    top: $default-size * 10.2;
+    right: $default-size*2;
+    @media screen and (min-width: map-get($breakpoints, tablet)){
+        font-size: $default-size * 1.2;
+        top: $default-size * 11.5;
+        right: $default-size*2.5;        
     }
+} 
+
+.info { 
+    background-color: $color-bg-secondary;
+    border-radius: 0 0 $default-size $default-size;
+    height: $default-size * 4;
+    padding: $default-size;
+    margin-top: $default-size * -0.15;
+    @include bloc-shadow(0px,$default-size * 0.12, $default-size*0.5, $color-shadow); 
+    position: relative;
+    @media screen and (min-width: map-get($breakpoints, tablet)){
+        height: $default-size * 4;
+    }
+}
+  
+.name {
+    font-size: $default-size * 0.85;  
+    font-weight: bold;
+    @media screen and (min-width: map-get($breakpoints, tablet)){
+        font-size: $default-size * 0.9; 
+    }
+}
+
+.city {   
+    font-size: $default-size * 0.85;       
+    padding: 5px 0 25px 0;
+    @media screen and (min-width: map-get($breakpoints, tablet)){
+        font-size: $default-size * 0.9; 
+    }
+}   
+
+.fa-heart {
+    @include like;
 }

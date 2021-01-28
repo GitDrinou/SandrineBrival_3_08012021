@@ -35,4 +35,26 @@
     }
 }
 
+@mixin cfg-like ($bg:$color-bg-secondary) {
+    background: $bg;
+    background-position: bottom;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -webkit-text-stroke-width: medium;
+    -webkit-text-stroke-color: $color-font;
+}
+
+@mixin like {    
+    font-weight: bold;
+    cursor: pointer;  
+    @include cfg-like($color-bg-secondary);
+    &:active{      
+        transition-timing-function: cubic-bezier(.4,.91,.66,.94);          
+        transition: background-color 2000ms;
+        @include cfg-like($bg:linear-gradient($color-primary, $color-secondary));
+        -webkit-text-stroke-width: thin;        
+        -webkit-text-stroke-color: $color-primary-light;
+    }    
+}
+
 

@@ -401,16 +401,22 @@ body {
   position: fixed;
   height: 100%;
   max-width: 100%;
-  background: #F6F6F6;
+  background: #9356DC;
   z-index: 1;
-  left: 2.5rem;
-  padding: 40% 20%;
+  left: 0;
+  right: 0;
+  padding: 12%;
   animation: hide 2000ms forwards ease 1;
   animation-delay: 3s;
 }
 @media screen and (min-width: 480px) {
   .load-block {
-    padding: 20% 40%;
+    padding: 35%;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .load-block {
+    padding: 40%;
   }
 }
 
@@ -445,7 +451,7 @@ body {
   animation-delay: 1000ms;
 }
 
-.pres__heading {
+.pres-heading {
   margin-top: 1.25rem;
   font-size: 1.5rem;
   font-weight: bold;
@@ -454,7 +460,7 @@ body {
   max-width: 100%;
 }
 @media screen and (min-width: 480px) {
-  .pres__heading {
+  .pres-heading {
     margin-top: 1.875rem;
     font-size: 1.5rem;
     font-weight: bold;
@@ -464,7 +470,7 @@ body {
   }
 }
 
-.pres__subheading {
+.pres-subheading {
   margin-top: 0rem;
   font-size: 1.125rem;
   font-weight: normal;
@@ -473,7 +479,7 @@ body {
   max-width: 100%;
 }
 @media screen and (min-width: 480px) {
-  .pres__subheading {
+  .pres-subheading {
     margin-top: 0rem;
     font-size: 1.25rem;
     font-weight: normal;
@@ -484,30 +490,41 @@ body {
   }
 }
 
-.fonc__heading {
-  margin-top: 3.125rem;
+.b-fonc > h2 {
+  margin-top: 3.75rem;
   font-size: 1.25rem;
   font-weight: bold;
   padding: 1.25rem;
   background-color: #FFFFFF;
   max-width: 100%;
 }
+
 @media screen and (min-width: 480px) {
-  .fonc__container {
+  .b-fonc__container {
     display: grid;
     grid-template-columns: 2fr 2fr 2fr;
   }
 }
-.fonc__element {
+.etape {
   position: relative;
+  display: grid;
+  grid-template-columns: 25% auto;
   margin: 0.625rem 1.25rem;
   height: 3.75rem;
   border-radius: 2.1875rem;
   padding: 1.25rem;
   box-shadow: 0px 0.15rem 0.625rem #c3c3c3;
-  background-color: brown;
 }
-.fonc__puce {
+@media screen and (min-width: 480px) {
+  .etape {
+    margin-top: 1.875rem;
+    padding: 1.5rem;
+    height: max-content;
+    grid-template-columns: 1fr auto;
+  }
+}
+
+.etape__num {
   position: absolute;
   top: 1.25rem;
   left: -0.5rem;
@@ -521,35 +538,39 @@ body {
   margin-right: 1.25rem;
 }
 @media screen and (min-width: 480px) {
-  .fonc__puce {
+  .etape__num {
+    top: -1rem;
+    left: 45%;
+    right: 45%;
+    margin: 0;
     font-size: 1.25rem;
     height: 1.875rem;
     width: 1.875rem;
     text-align: center;
   }
 }
-.fonc__ico {
-  font-size: 1.125rem;
-  color: #909090;
-  position: absolute;
-  left: 2.5rem;
-  top: 1.25rem;
+
+.etape__text {
+  font-weight: bold;
+  text-align: left;
 }
 @media screen and (min-width: 480px) {
-  .fonc__ico {
-    font-size: 1.875rem;
+  .etape__text {
+    margin-top: 1rem;
+    font-size: 1.125rem;
   }
 }
-.fonc__text {
-  font-weight: bold;
-  position: absolute;
-  left: 5rem;
-  top: 1.25rem;
+
+.ico {
+  font-size: 1.25rem;
+  color: #909090;
+  margin-left: 1.25rem;
 }
 @media screen and (min-width: 480px) {
-  .fonc__text {
-    font-size: 1.3125rem;
-    left: 6.25rem;
+  .ico {
+    font-size: 1.375rem;
+    text-align: center;
+    margin: 0.625rem 0.625rem 0 0.625rem;
   }
 }
 
@@ -557,25 +578,11 @@ body {
   color: #9356DC;
 }
 
-.rest {
+.b-rest {
   margin-top: 4.375rem;
   color: #000;
-  position: relative;
 }
-@media screen and (min-width: 480px) {
-  .rest__container {
-    display: grid;
-    grid-template-columns: 3fr 3fr;
-    width: 100%;
-  }
-}
-@media screen and (min-width: 1025px) {
-  .rest__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-}
-.rest__heading {
+.b-rest > h2 {
   margin-top: 3.75rem;
   font-size: 1.25rem;
   font-weight: bold;
@@ -583,28 +590,61 @@ body {
   background-color: #FFFFFF;
   max-width: 100%;
 }
-.rest__element {
+
+@media screen and (min-width: 480px) {
+  .b-rest__container {
+    display: grid;
+    grid-template-columns: 3fr 3fr;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .b-rest__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.rest-card {
   padding: 0 1.25rem 1.25rem 1.25rem;
   position: relative;
 }
-.rest__element a {
+.rest-card > a {
   text-decoration: none;
   color: #000;
 }
-.rest__img {
+
+.rest-card__img {
   border-radius: 1.25rem 1.25rem 0 0;
   height: 10.9375rem;
   width: 100%;
   object-fit: cover;
 }
 @media screen and (min-width: 480px) {
-  .rest__img {
+  .rest-card__img {
     height: 12.5rem;
     width: 100%;
     object-fit: cover;
   }
 }
-.rest__info {
+
+.rest-card__like {
+  position: absolute;
+  font-size: 1.375rem;
+  text-align: center;
+  cursor: pointer;
+  top: 12.75rem;
+  right: 2.5rem;
+}
+@media screen and (min-width: 480px) {
+  .rest-card__like {
+    font-size: 1.5rem;
+    top: 14.375rem;
+    right: 3.125rem;
+  }
+}
+
+.info {
   background-color: #FFFFFF;
   border-radius: 0 0 1.25rem 1.25rem;
   height: 5rem;
@@ -614,39 +654,28 @@ body {
   position: relative;
 }
 @media screen and (min-width: 480px) {
-  .rest__info {
+  .info {
     height: 5rem;
   }
 }
-.rest__like {
-  position: absolute;
-  font-size: 1.375rem;
-  right: 3.125rem;
-  top: 14.375rem;
-  text-align: center;
-  cursor: pointer;
-}
-@media screen and (min-width: 480px) {
-  .rest__like {
-    font-size: 1.5rem;
-  }
-}
-.rest__name {
+
+.name {
   font-size: 1.0625rem;
   font-weight: bold;
 }
 @media screen and (min-width: 480px) {
-  .rest__name {
-    font-size: 1.3125rem;
+  .name {
+    font-size: 1.125rem;
   }
 }
-.rest__city {
+
+.city {
   font-size: 1.0625rem;
   padding: 5px 0 25px 0;
 }
 @media screen and (min-width: 480px) {
-  .rest__city {
-    font-size: 1.3125rem;
+  .city {
+    font-size: 1.125rem;
   }
 }
 
@@ -662,11 +691,13 @@ body {
 }
 .fa-heart:active {
   transition-timing-function: cubic-bezier(0.4, 0.91, 0.66, 0.94);
-  transition: background-color 2000mq;
+  transition: background-color 2000ms;
   background: linear-gradient(#9356DC, #FF79DA);
   background-position: bottom;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: medium;
+  -webkit-text-stroke-color: #000;
   -webkit-text-stroke-width: thin;
   -webkit-text-stroke-color: #a16be0;
 }
