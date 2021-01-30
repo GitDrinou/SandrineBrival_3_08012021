@@ -2,7 +2,7 @@
     position: fixed;
     height: 100%;
     max-width: 100%;
-    background: $color-primary;
+    background: $color-bg-primary;
     z-index: 1;
     left:0;
     right: 0;
@@ -13,7 +13,7 @@
         padding: 35%;
     }
     @media screen and (min-width: map-get($breakpoints, desktop)){
-        padding: 40%;
+        padding: 20% 40%;
     }
 }
 
@@ -24,7 +24,7 @@
     justify-content: space-evenly;
     border-radius: 20%;
     padding: $default-size*0.5;
-    border: 5px solid $color-secondary;
+    border: $default-size*0.5 solid $color-secondary;
     &__bar {
         background: $color-gradient;
         height: 100%;
@@ -165,16 +165,9 @@
     } 
 }  
 .rest-card__like {
-    position: absolute;
-    font-size: $default-size * 1.1;
-    text-align: center;
-    cursor: pointer;
-    top: $default-size * 10.2;
-    right: $default-size*2;
+    @include pos-heart($default-size * 10.2,$default-size*2, $default-size * 1.1 );
     @media screen and (min-width: map-get($breakpoints, tablet)){
-        font-size: $default-size * 1.2;
-        top: $default-size * 11.5;
-        right: $default-size*2.5;        
+       @include pos-heart($default-size * 11.5, $default-size*2.5, $default-size * 1.2)
     }
 } 
 
@@ -206,7 +199,3 @@
         font-size: $default-size * 0.9; 
     }
 }   
-
-.fa-heart {
-    @include like;
-}

@@ -11,6 +11,15 @@
     max-width: 100%;
 }
 
+@mixin pos-heart($top, $right, $f-size) {
+    position: absolute;
+    font-size: $f-size; //$default-size * 1.1;
+    text-align: center;
+    cursor: pointer;
+    top: $top;
+    right: $right; 
+}
+
 @mixin btn {
     margin-top: $default-size * 1.5;
     height: $default-size * 2.5;
@@ -35,6 +44,7 @@
     }
 }
 
+
 @mixin cfg-like ($bg:$color-bg-secondary) {
     background: $bg;
     background-position: bottom;
@@ -43,18 +53,4 @@
     -webkit-text-stroke-width: medium;
     -webkit-text-stroke-color: $color-font;
 }
-
-@mixin like {    
-    font-weight: bold;
-    cursor: pointer;  
-    @include cfg-like($color-bg-secondary);
-    &:active{      
-        transition-timing-function: cubic-bezier(.4,.91,.66,.94);          
-        transition: background-color 2000ms;
-        @include cfg-like($bg:linear-gradient($color-primary, $color-secondary));
-        -webkit-text-stroke-width: thin;        
-        -webkit-text-stroke-color: $color-primary-light;
-    }    
-}
-
 

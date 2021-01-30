@@ -20,3 +20,37 @@
     }
 }
 
+
+@keyframes heart {
+    0% {
+        @include cfg-like($bg:linear-gradient($color-primary, $color-secondary));
+        -webkit-text-stroke-width: thin;        
+        -webkit-text-stroke-color: $color-primary-light;
+        background-size: 100%;
+    }
+}
+
+@keyframes mnu-hide {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+        width: 100%;
+    }
+    100% { 
+        transform: translateY(200%);
+        transform-origin: bottom;
+        opacity: 0;         
+    }
+}
+
+@keyframes menu {
+    0% {
+        opacity: 0;
+        transform-origin: top;
+        transform: translateY(-110%);
+        
+    }
+    100% {
+        opacity: 1;		
+    }
+}

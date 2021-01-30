@@ -1,0 +1,14 @@
+
+.fa-heart {
+    font-weight: bold;
+    cursor: pointer;  
+    @include cfg-like($color-bg-secondary); 
+    &:active {
+        animation: heart 2500ms backwards ease 1;        
+    }
+    @media screen and (min-width: map-get($breakpoints, desktop)){   
+        &:hover {
+            animation: heart 2500ms backwards ease 1;
+        } 
+    }
+}

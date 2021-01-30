@@ -10,25 +10,30 @@
         margin-left: $default-size * 0.5;
         max-width: 40%;
     }
-    @media screen and (min-width: map-get($breakpoints, tablet)){
+}
+
+@media screen and (min-width: map-get($breakpoints, tablet)) {
+    .search {
         height: $default-size * 4.25;        
         padding-top: $default-size * 2.25;
         padding-left: 10%;
-        &__input {
-            font-size: $default-size;            
-            margin-left: $default-size;
-        }
-        &__ico {   
-            font-size: $default-size * 1.2; 
-        }
+    }
+    .search__input {
+        font-size: $default-size;            
+        margin-left: $default-size;
+    }
+    .search__ico {   
+        font-size: $default-size * 1.2; 
     }
 }
 
 .return {
     position: absolute;
-    left: $default-size * 1.25;
+    left:05;
     top: $default-size * 1.25;
+    padding-left:  $default-size;
     font-size: $default-size * 1.05;
+    max-width: 100%;
     a {
         text-decoration: none;
         color: $color-font;
