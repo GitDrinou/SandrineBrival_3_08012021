@@ -29,7 +29,7 @@
 
 .return {
     position: absolute;
-    left:05;
+    //left:$default-size*0.5;
     top: $default-size * 1.25;
     padding-left:  $default-size;
     font-size: $default-size * 1.05;

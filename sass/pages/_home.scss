@@ -6,7 +6,7 @@
     z-index: 1;
     left:0;
     right: 0;
-    padding: 12%; 
+    padding: 25%; 
     animation: hide 2000ms forwards ease 1; 
     animation-delay: 3s;
     @media screen and (min-width: map-get($breakpoints, tablet)){
@@ -24,7 +24,7 @@
     justify-content: space-evenly;
     border-radius: 20%;
     padding: $default-size*0.5;
-    border: $default-size*0.5 solid $color-secondary;
+    //border: $default-size*0.25 solid $color-secondary;
     &__bar {
         background: $color-gradient;
         height: 100%;

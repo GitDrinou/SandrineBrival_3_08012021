@@ -2,7 +2,6 @@
     &__container {
         position: absolute;
         margin-top: $default-size;
-        //height:90%;
         width: 100%;
         background: $color-bg-primary;
         z-index: 1;
@@ -13,7 +12,8 @@
 
 .mnu-head {
     position: relative;
-    & > img {    
+    & > img {            
+        width: 100%;
         height: $default-size * 13.25;
         object-fit: cover;
     }
@@ -29,16 +29,14 @@
         padding: $default-size*1.75 $default-size 0 $default-size;        
     }
 }
-@media screen and (min-width: map-get($breakpoints, tablet)) {
-    .mnu-head > h1 {
-        font-size: $default-size * 1.5;
-    }
-}
 
 .mnu--like {
     @include pos-heart($default-size * 12,$default-size*0.8, $default-size * 1.1 );
     @media screen and (min-width: map-get($breakpoints, tablet)){
-        @include pos-heart($default-size * 11.5, $default-size*2.5, $default-size * 1.2)
+        @include pos-heart($default-size * 11.5, $default-size*2.5, $default-size * 1.2);
+    }
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        @include pos-heart($default-size * 13.5, $default-size*12, $default-size * 1.2);
     }
 }
 
@@ -87,7 +85,7 @@
     right: 0;
     width: 50px;
     height: 100%;
-    font-weight: bold;
+    font-weight: bold;
     font-size: $default-size;
     text-align: center;
     background: $color-tertiary;
@@ -95,7 +93,6 @@
     border-radius: 0 $default-size $default-size 0;        
     padding: $default-size $default-size*0.5 0 $default-size*0.5; 
     opacity: 0;
-    //transform: scaleX(0);
     @media screen and (min-width: map-get($breakpoints, tablet)){
         font-size: $default-size *1.8;
         padding: $default-size*1.3 0 0 $default-size*0.75;
@@ -107,37 +104,17 @@
     }
     & .plates__checker {
         opacity: 1;
-        //transform: scaleX(1);
         transform-origin: right;
         transition: all 450ms;       
     }
-    
+    @media screen and (min-width: map-get($breakpoints, tablet)){
+        .plates__checker {
+            width: $default-size*5;
+        }   
+    }
 }
 
-@media screen and (min-width: map-get($breakpoints, tablet)){
-    .plates__checker {
-         width: 90px;
-    }   
-}
 
-@media screen and (min-width: map-get($breakpoints, desktop)){
-    .plates__checker {
-         width: 90px;
-    }  
-    
-.plates:hover {
-    & .plates-cont {
-        animation: check 2000ms;
-    }
-    & .plates__checker {
-        opacity: 1;
-        //transform: scaleX(1);
-        transform-origin: right;
-        transition: all 450ms;       
-    }
-    
-} 
-}
 
 .plates-cont {
     position: relative;
@@ -154,20 +131,12 @@
         text-overflow: ellipsis;
         font-weight: bold;
         padding-bottom: $default-size*0.2;
-        @media screen and (min-width: map-get($breakpoints, tablet)){
-            font-size: $default-size;
-            padding: $default-size*0.25 $default-size*0.75 0 $default-size*0.75;
-        }
     }
-    &__descr {
+    &_r_descr {
         width: 80%;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        @media screen and (min-width: map-get($breakpoints, tablet)){
-            font-size: $default-size;
-            padding: $default-size*0.3 0 0 $default-size*0.75;
-        }
     } 
     &__price {
         position: absolute;
@@ -176,29 +145,57 @@
         font-weight: bold;
         height: 100%;
         text-align: right;  
-        @media screen and (min-width: map-get($breakpoints, tablet)){
-            font-size: $default-size; 
-            padding: $default-size*0.35 $default-size*0.75 0 $default-size*0.75;
-        }
     }     
     @media screen and (min-width: map-get($breakpoints, tablet)){
-        height: $default-size*4;   
-        //padding: $default-size*0.9;
+        height: $default-size*4; 
     }
 }
 
-
-
-
-@keyframes check {
-    0% {
-      width: 90%;       
+@media screen and (min-width: map-get($breakpoints, tablet)) {
+    .mnu-head > h1 {
+        font-size: $default-size * 1.5;
     }
-    33% {   
-        width: 87%;     
-        animation-timing-function: cubic-bezier(1,.01,1,.31);
+    .plates-cont__name {
+        font-size: $default-size;
+        padding: $default-size*0.25 $default-size*0.75 0 $default-size*0.75;
     }
-    100% {
-        width: 85%;
+    .plates-cont__desc {
+        font-size: $default-size;
+        padding: $default-size*0.3 0 0 $default-size*0.75;
+    }
+    .plates-cont__price {
+        font-size: $default-size; 
+        padding: $default-size*0.35 $default-size*0.75 0 $default-size*0.75;
+    }
+}
+@media screen and (min-width: map-get($breakpoints, desktop)) {
+    .mnu-head > img {    
+        height: $default-size * 15;
+    }
+    .mnu-head > h1 {
+        font-size: $default-size * 1.7;
+        text-align: center;
+    }
+    .plates__checker {
+         width: 90px;
+    }          
+    .plates:hover {
+        & .plates-cont {
+            animation: check 2000ms;
+        }
+        & .plates__checker {
+            opacity: 1;
+            //transform: scaleX(1);
+            transform-origin: right;
+            transition: all 600ms;       
+        }        
+    } 
+    .menu > section > ul {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: $default-size*0.5;
+    }
+    .menu > section{
+        padding: 0 $default-size*4 ;
     }
 }

@@ -21,7 +21,7 @@ $load-bars-size: $default-size;
 $load-size: $load-bars-size * 300;
 $load-bars-color-min: $color-secondary;
 $load-bars-color-max: $color-primary;
-$load-num-bars: 5;
+$load-num-bars: 6;
 $load-duration: 1000ms;
 $load-delay: $load-duration / $load-num-bars;
 

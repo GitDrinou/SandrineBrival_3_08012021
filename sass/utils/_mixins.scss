@@ -47,10 +47,17 @@
 
 @mixin cfg-like ($bg:$color-bg-secondary) {
     background: $bg;
-    background-position: bottom;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
     -webkit-text-stroke-width: medium;
     -webkit-text-stroke-color: $color-font;
+}
+
+@mixin cfg-like-on ($bg:$color-bg-secondary) {
+    background: $bg;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -webkit-text-stroke-width: thin;        
+    -webkit-text-stroke-color: $color-primary-light; 
 }
 

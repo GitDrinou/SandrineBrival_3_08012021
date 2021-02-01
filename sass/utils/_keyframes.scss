@@ -23,10 +23,20 @@
 
 @keyframes heart {
     0% {
-        @include cfg-like($bg:linear-gradient($color-primary, $color-secondary));
-        -webkit-text-stroke-width: thin;        
-        -webkit-text-stroke-color: $color-primary-light;
-        background-size: 100%;
+        @include cfg-like($color-bg-secondary) ;
+        background-size: 100%; 
+        transform: scaleY(0.3);
+    }
+    24% {
+        @include cfg-like-on($bg:linear-gradient($color-primary, $color-secondary)); 
+        background-size: 100%;         
+        transform: scaleY(0.6); 
+    }
+    100% {
+        @include cfg-like-on($bg:linear-gradient($color-primary, $color-secondary));   
+        background-size: 100%;        
+        transform: scaleY(1);
+        animation-play-state: paused;
     }
 }
 
@@ -47,10 +57,22 @@
     0% {
         opacity: 0;
         transform-origin: top;
-        transform: translateY(-110%);
-        
+        transform: translateY(-110%);        
     }
     100% {
         opacity: 1;		
+    }
+}
+
+@keyframes check {
+    0% {
+      width: 90%;       
+    }
+    33% {   
+        width: 87%;     
+        animation-timing-function: cubic-bezier(1,.01,1,.31);
+    }
+    100% {
+        width: 85%;
     }
 }
