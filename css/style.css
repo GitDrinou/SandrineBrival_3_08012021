@@ -479,14 +479,9 @@ body {
     font-size: 1.875rem;
   }
 
-  .plates-cont__name {
+  .plates-cont__name, .plates-cont__descr {
     font-size: 1.25rem;
     padding: 0.3125rem 0.9375rem 0 0.9375rem;
-  }
-
-  .plates-cont__desc {
-    font-size: 1.25rem;
-    padding: 0.375rem 0 0 0.9375rem;
   }
 
   .plates-cont__price {

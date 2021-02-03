@@ -154,13 +154,9 @@
     .mnu-head > h1 {
         font-size: $default-size * 1.5;
     }
-    .plates-cont__name {
+    .plates-cont__name, .plates-cont__descr {
         font-size: $default-size;
         padding: $default-size*0.25 $default-size*0.75 0 $default-size*0.75;
-    }
-    .plates-cont__desc {
-        font-size: $default-size;
-        padding: $default-size*0.3 0 0 $default-size*0.75;
     }
     .plates-cont__price {
         font-size: $default-size; 
