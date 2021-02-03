@@ -6,15 +6,11 @@
     z-index: 1;
     left:0;
     right: 0;
-    padding: 25%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     animation: hide 2000ms forwards ease 1; 
     animation-delay: 3s;
-    @media screen and (min-width: map-get($breakpoints, tablet)){
-        padding: 35%;
-    }
-    @media screen and (min-width: map-get($breakpoints, desktop)){
-        padding: 20% 40%;
-    }
 }
 
 .load {   

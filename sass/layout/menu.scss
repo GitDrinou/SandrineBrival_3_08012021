@@ -114,8 +114,6 @@
     }
 }
 
-
-
 .plates-cont {
     position: relative;
     display: grid;
@@ -125,15 +123,15 @@
     cursor: pointer; 
     padding: $default-size*0.5;
     &__name {    
-        width: 80%;    
+        width: 75%;    
         white-space: nowrap;
         overflow: hidden;        
         text-overflow: ellipsis;
         font-weight: bold;
         padding-bottom: $default-size*0.2;
     }
-    &_r_descr {
-        width: 80%;
+    &__descr {
+        width: 75%;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -145,6 +143,7 @@
         font-weight: bold;
         height: 100%;
         text-align: right;  
+        padding-left: $default-size;
     }     
     @media screen and (min-width: map-get($breakpoints, tablet)){
         height: $default-size*4; 

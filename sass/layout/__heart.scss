@@ -4,11 +4,11 @@
     cursor: pointer;  
     @include cfg-like($color-bg-secondary); 
     &:active {
-        animation: heart 3000ms forwards ease-out;         
+        animation: heart 2500ms forwards ease-out;         
     }
     @media screen and (min-width: map-get($breakpoints, desktop)){   
         &:hover {
-            animation: heart 3000ms forwards ease-out; 
+            animation: heart 3500ms forwards cubic-bezier(.85,.01,.83,.67); 
         } 
     }
 }
