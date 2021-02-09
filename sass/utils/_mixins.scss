@@ -44,20 +44,12 @@
     }
 }
 
-
-@mixin cfg-like ($bg:$color-bg-secondary) {
+/*
+@mixin cfg-like ($bg:transparent,$border:medium, $border-color:$color-font) {
     background: $bg;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
-    -webkit-text-stroke-width: medium;
-    -webkit-text-stroke-color: $color-font;
+    -webkit-text-stroke-width: $border;
+    -webkit-text-stroke-color: $border-color;
 }
-
-@mixin cfg-like-on ($bg:$color-bg-secondary) {
-    background: $bg;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -webkit-text-stroke-width: thin;        
-    -webkit-text-stroke-color: $color-primary-light; 
-}
-
+*/

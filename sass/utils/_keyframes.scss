@@ -20,32 +20,6 @@
     }
 }
 
-
-@keyframes heart {
-    0% {
-        @include cfg-like($color-bg-secondary) ;
-        background-size: 100%; 
-        transform-origin: bottom;
-        transform: translateY(0.1);
-        //transform: scaleY(0.3);
-    }
-    24% {
-        @include cfg-like-on($bg:linear-gradient($color-primary, $color-secondary)); 
-        background-size: 100%;         
-        transform-origin: bottom;
-        transform: translateY(0.6);       
-        //transform: scaleY(0.6); 
-    }
-    100% {
-        @include cfg-like-on($bg:linear-gradient($color-primary, $color-secondary));   
-        background-size: 100%;        
-        transform-origin: bottom;
-        transform: translateY(1);        
-        //transform: scaleY(1);
-        animation-play-state: paused;
-    }
-}
-
 @keyframes mnu-hide {
     0% {
         opacity: 1;
@@ -82,3 +56,4 @@
         width: 80%;
     }
 }
+

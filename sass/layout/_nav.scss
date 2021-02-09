@@ -1,6 +1,7 @@
 .search {
     height: $default-size * 3.25;
     padding-top: $default-size * 1.25;
+    background-color: $color-bg-primary-dark;
     &__input {
         font-size: $default-size * 0.8;
         font-weight: bold;;

@@ -3,6 +3,15 @@
     tablet: 1024px,
     desktop: 1290px
 }*/
+/*
+@mixin cfg-like ($bg:transparent,$border:medium, $border-color:$color-font) {
+    background: $bg;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -webkit-text-stroke-width: $border;
+    -webkit-text-stroke-color: $border-color;
+}
+*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Shrikhand&display=swap");
 @keyframes hide {
   0% {
@@ -21,39 +30,6 @@
   }
   100% {
     transform: scaleY(1);
-  }
-}
-@keyframes heart {
-  0% {
-    background: #FFFFFF;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: medium;
-    -webkit-text-stroke-color: #000;
-    background-size: 100%;
-    transform-origin: bottom;
-    transform: translateY(0.1);
-  }
-  24% {
-    background: linear-gradient(#9356DC, #FF79DA);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: thin;
-    -webkit-text-stroke-color: #a16be0;
-    background-size: 100%;
-    transform-origin: bottom;
-    transform: translateY(0.6);
-  }
-  100% {
-    background: linear-gradient(#9356DC, #FF79DA);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: thin;
-    -webkit-text-stroke-color: #a16be0;
-    background-size: 100%;
-    transform-origin: bottom;
-    transform: translateY(1);
-    animation-play-state: paused;
   }
 }
 @keyframes mnu-hide {
@@ -163,7 +139,7 @@ body {
   height: 4.375rem;
   padding-top: 1.25rem;
   background-color: #FFFFFF;
-  box-shadow: 0 0.125rem 0.625rem #c3c3c3;
+  box-shadow: 0px 0.375rem 0.25rem #e2e2e2;
 }
 @media screen and (min-width: 480px) {
   .header {
@@ -174,6 +150,7 @@ body {
 .search {
   height: 4.0625rem;
   padding-top: 1.5625rem;
+  background-color: #e9e9e9;
 }
 .search__input {
   font-size: 1rem;
@@ -225,24 +202,57 @@ body {
   color: #185546;
 }
 
-.fa-heart {
-  font-weight: bold;
+.like__btn {
+  height: 2rem;
+  width: 2rem;
+  background-color: transparent;
+  border: transparent 0px solid;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  background: #FFFFFF;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: medium;
-  -webkit-text-stroke-color: #000;
+  position: relative;
+  background-color: black;
 }
-.fa-heart:active {
-  animation: heart 2500ms forwards ease-out;
+.like__btn:hover::before {
+  opacity: 1;
 }
-@media screen and (min-width: 1025px) {
-  .fa-heart:hover {
-    animation: heart 3500ms forwards cubic-bezier(0.85, 0.01, 0.83, 0.67);
-  }
+.like__btn::before {
+  opacity: 0;
+  transition: 0.5s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
 }
 
+.heart__like {
+  transition-duration: 0.25s;
+  background-color: #f6f6f6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: lighten;
+}
+
+.like__btn:active .heart__like--noBg {
+  opacity: 0;
+}
+
+@media screen and (min-width: 1025px) {
+  .like__btn:hover .heart__like--noBg {
+    opacity: 0;
+  }
+}
 .footer {
   margin-top: 3.75rem;
   background-color: #343434;
@@ -385,6 +395,12 @@ body {
     height: max-content;
     grid-template-columns: 1fr auto;
   }
+}
+.etape:hover {
+  background-color: #F6F6F6;
+}
+.etape:hover .ico {
+  color: #9356DC;
 }
 
 .etape__num {
@@ -683,35 +699,50 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  width: 50px;
+  width: 0;
   height: 100%;
-  font-weight: bold;
-  font-size: 1.25rem;
-  text-align: center;
   background: #99E2D0;
-  color: #FFFFFF;
   border-radius: 0 1.25rem 1.25rem 0;
   padding: 1.25rem 0.625rem 0 0.625rem;
+  text-align: center;
   opacity: 0;
 }
+.plates__checker .fa-check-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #FFFFFF;
+  transform: rotate(180deg);
+  transition-duration: 0.5s;
+}
 @media screen and (min-width: 480px) {
-  .plates__checker {
+  .plates__checker .fa-check-circle {
     font-size: 2.25rem;
     padding: 1.625rem 0 0 0.9375rem;
   }
 }
 
 .plates:active .plates-cont {
-  animation: check 2000ms;
+  animation: check 3000ms;
 }
 .plates:active .plates__checker {
+  width: 50px;
+  right: -50px;
   opacity: 1;
-  transform-origin: right;
-  transition: all 450ms;
+}
+.plates:active .fa-check-circle {
+  opacity: 1;
+  transform: rotate(0deg);
+  transition: all 600ms;
 }
 @media screen and (min-width: 480px) {
   .plates:active .plates__checker {
-    width: 6.25rem;
+    width: 100px;
+    right: -100px;
+    opacity: 1;
+    padding: 0;
   }
 }
 
@@ -778,16 +809,19 @@ body {
     text-align: center;
   }
 
-  .plates__checker {
-    width: 90px;
-  }
-
   .plates:hover .plates-cont {
     animation: check 2000ms;
   }
   .plates:hover .plates__checker {
+    width: 75px;
+    right: -75px;
     opacity: 1;
-    transform-origin: right;
+    padding: 0;
+  }
+  .plates:hover .fa-check-circle {
+    margin-top: 0;
+    opacity: 1;
+    transform: rotate(0);
     transition: all 600ms;
   }
 

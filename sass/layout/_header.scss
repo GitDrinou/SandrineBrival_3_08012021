@@ -2,7 +2,7 @@
     height: $default-size * 3.5; 
     padding-top: $default-size;
     background-color: $color-bg-secondary;
-    @include bloc-shadow(0,$default-size*0.1, $default-size*0.5, $color-shadow);
+    @include bloc-shadow(0px,$default-size * 0.3, $default-size*0.2, darken($color-bg-primary-dark,3%));
     @media screen and (min-width: map-get($breakpoints, tablet)){
         height: $default-size * 4.5;
     }
