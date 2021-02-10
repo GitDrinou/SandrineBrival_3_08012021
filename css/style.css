@@ -714,8 +714,9 @@ body {
   font-weight: bold;
   font-size: 1.25rem;
   color: #FFFFFF;
-  transform: rotate(180deg);
-  transition-duration: 0.5s;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition-duration: 500ms;
 }
 @media screen and (min-width: 480px) {
   .plates__checker .fa-check-circle {
@@ -735,6 +736,7 @@ body {
 .plates:active .fa-check-circle {
   opacity: 1;
   transform: rotate(0deg);
+  transform-origin: center;
   transition: all 600ms;
 }
 @media screen and (min-width: 480px) {
